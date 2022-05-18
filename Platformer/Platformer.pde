@@ -9,3 +9,9 @@
         player1.display();
       }
       
+      void keyPressed() {
+        if (key==UP) {
+          player1.jump();
+        }
+      }
+      
