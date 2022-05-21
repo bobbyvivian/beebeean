@@ -1,11 +1,19 @@
-Platforms test1;
+ArrayList<Platforms> platforms;
+
 void setup() {
         size(1000, 800);
-        // testing Platforms
-        test1 = new Platforms(width/2,height/2,100,40,color(random(255), random(255), random(255)));
+        platforms = new ArrayList<Platforms>();
+        
+        // random platforms, testing purposes, will revamp later
+        for (int i = 0;i<10;i++) {
+          Platforms temp = new Platforms(random(width),random(height),random(200),random(100),color(random(255), random(255), random(255)));
+          platforms.add(temp);
+        }
 }
 
 void draw() {
         background(242, 225, 252);
-        test1.display();
+        for (Platforms p : platforms) {
+          p.display();
+        }
 }
