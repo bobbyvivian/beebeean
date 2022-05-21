@@ -9,4 +9,10 @@ public class Platforms {
     sizeY = h;
     rgb = c;
   }
+  
+  public void display() {
+    fill(rgb);
+    noStroke();
+    rect(x,y,sizeX,sizeY);
+  }
 }
