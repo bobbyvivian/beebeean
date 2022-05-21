@@ -2,7 +2,7 @@ public class Platforms {
   float x,y,sizeX,sizeY;
   color rgb;
   
-  public Platforms(color c, float xpos, float ypos, float w, float h) {
+  public Platforms(float xpos, float ypos, float w, float h, color c) {
     x = xpos;
     y = ypos;
     sizeX = w;
