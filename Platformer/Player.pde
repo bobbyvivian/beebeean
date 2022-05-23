@@ -12,5 +12,12 @@ public class Player {
     rgb = col;
     onGround = true;
     alive = true;
+    size = 25;
+  }
+  
+  public void display() {
+    fill(rgb);
+    noStroke();
+    rect(x,y,size,size);
   }
 }
