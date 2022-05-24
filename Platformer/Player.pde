@@ -25,36 +25,36 @@ public class Player {
   }
   
   public void move() {
-    if (right&&onGround) {
+    if (right) {
       // borders
-      if (x+xSpeed < width) {
+      if (x+xSpeed+playerSize < width) {
         x+=xSpeed;
       }
     }
-    else if (left&&onGround) {
+    if (left) {
       if (x-xSpeed > 0) {
         x-=xSpeed;
       }
     }
     
     // jump
-    if (up) {
-      if (ySpeed > 0) {
-        if (y-ySpeed>0) {
-          y-=ySpeed;
-        }
-        ySpeed-=gravity;
-      }
+    //if (up) {
+    //  if (ySpeed > 0) {
+    //    if (y-ySpeed>0) {
+    //      y-=ySpeed;
+    //    }
+    //    ySpeed-=gravity;
+    //  }
       
-      if (ySpeed <= 0 && !onGround) {
-        if (y+ySpeed<height) {
-          y+=ySpeed;
-        }        
-        ySpeed+=gravity;
-      }
+    //  if (ySpeed <= 0 && !onGround) {
+    //    if (y+ySpeed<height) {
+    //      y+=ySpeed;
+    //    }        
+    //    ySpeed+=gravity;
+    //  }
             
     }
-  }
+  
   
   public void onGround() {
     onGround = false;
