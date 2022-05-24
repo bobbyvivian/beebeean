@@ -6,7 +6,7 @@ void setup() {
   size(1000, 800);
   platforms = new ArrayList<Platforms>();
   playerSize = 25;
-  player = new Player(playerSize/2,750-playerSize,color(random(255),random(255),random(255)));
+  player = new Player(playerSize,750-playerSize,color(random(255),random(255),random(255)));
 
   //creating all the platforms in list
   Platforms plat1 = new Platforms(0, 750, 1000, 75, color(random(255), random(255), random(255))); // ground  
@@ -26,7 +26,6 @@ void draw() {
         
         // display and move player
         player.display();
-
         player.move();
         
         //testing purposes, display status of onGround
