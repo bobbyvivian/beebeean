@@ -1,8 +1,8 @@
 public class Player {
-  float x,y,xSpeed,ySpeed,points,gravity;
+  float x, y, xSpeed, ySpeed, points, gravity;
   color rgb;
   boolean onGround, alive, left, right, up;
-  
+
   public Player(float xpos, float ypos, color col) {
     x = xpos;
     y = ypos;
@@ -17,13 +17,13 @@ public class Player {
     right = false;
     up = false;
   }
-  
+
   public void display() {
     fill(rgb);
     noStroke();
-    rect(x,y,playerSize,playerSize);
+    rect(x, y, playerSize, playerSize);
   }
-  
+
   public void move() {
     if (right) {
       // borders
@@ -36,26 +36,26 @@ public class Player {
         x-=xSpeed;
       }
     }
-    
+
     // jump
-    //if (up) {
-    //  if (ySpeed > 0) {
-    //    if (y-ySpeed>0) {
-    //      y-=ySpeed;
-    //    }
-    //    ySpeed-=gravity;
-    //  }
-      
-    //  if (ySpeed <= 0 && !onGround) {
-    //    if (y+ySpeed<height) {
-    //      y+=ySpeed;
-    //    }        
-    //    ySpeed+=gravity;
-    //  }
-            
+    if (up) {
+      if (ySpeed > 0) {
+        if (y-ySpeed>0) {
+          y-=ySpeed;
+        }
+        ySpeed-=gravity;
+      }
+
+      if (ySpeed <= 0 && !onGround) {
+        if (y+ySpeed<height) {
+          y+=ySpeed;
+        }        
+        ySpeed+=gravity;
+      }
     }
-  
-  
+  }
+
+
   public void onGround() {
     onGround = false;
     for (Platforms p : platforms) {
