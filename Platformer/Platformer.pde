@@ -6,8 +6,9 @@ void setup() {
   size(1000, 800);
   platforms = new ArrayList<Platforms>();
   playerSize = 25;
-  player = new Player(playerSize/2,750-playerSize/2,color(random(255),random(255),random(255)));
+  player = new Player(playerSize/2,750-playerSize,color(random(255),random(255),random(255)));
 
+  //creating all the platforms in list
   Platforms plat1 = new Platforms(0, 750, 1000, 75, color(random(255), random(255), random(255))); // ground  
   platforms.add(plat1);
   
@@ -17,11 +18,19 @@ void setup() {
 
 void draw() {
         background(242, 225, 252);
+        
+        //display platforms
         for (Platforms p : platforms) {
           p.display();
         }
+        
+        // display and move player
         player.display();
+
         player.move();
+        
+        //testing purposes, display status of onGround
+        if (player.onGround) {text("TRUE",20,20);}
 }
 
 void keyPressed() {
