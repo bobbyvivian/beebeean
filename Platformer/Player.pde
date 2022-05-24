@@ -25,15 +25,18 @@ public class Player {
   
   public void move() {
     if (right) {
-      x+=xSpeed;
+      // borders
+      if (x+xSpeed < width-size/2) {
+        x+=xSpeed;
+      }
     }
     else if (left) {
-      y+=ySpeed;
-    }
-    //not moving
-    else {
+      if (x-xSpeed > size/2) {
+        x-=xSpeed;
+      }
     }
     
+    // jump
     if (up) {
     }
   }
