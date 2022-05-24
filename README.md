@@ -15,3 +15,7 @@ Incorporated this in the main Platformer class by making the keyPressed and keyR
 
 #### 5/23 Xinni 
 Worked on Platforms class: made ground level and some other platforms. Played around with width and height. Platformer class properly displays platforms.  
+
+#### 5/24 Xinni
+Did more work on the Platforms class: there are more platforms now woohoo!
+Fixed bug in Player where it would go up after moving. Altered move logic so if you press left while moving right the Player stops.  
