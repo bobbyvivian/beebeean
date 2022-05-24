@@ -8,7 +8,7 @@ public class Player {
     y = ypos;
     xSpeed = 1;
     ySpeed = 1;
-    gravity = .15;
+    gravity = .25;
     points = 0;
     rgb = col;
     onGround = true;
@@ -53,6 +53,15 @@ public class Player {
         ySpeed+=gravity;
       }
             
+    }
+  }
+  
+  public void onGround() {
+    onGround = false;
+    for (Platforms p : platforms) {
+      if (x+size==p.x-p.sizeX) {
+        onGround = true;
+      }
     }
   }
 }
