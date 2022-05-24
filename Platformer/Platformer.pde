@@ -1,12 +1,15 @@
 ArrayList<Platforms> platforms;
 Player player;
+float playerSize;
 
 void setup() {
-<<<<<<< HEAD
   size(1000, 800);
   platforms = new ArrayList<Platforms>();
+  playerSize = 25;
+  player = new Player(playerSize,750-playerSize,color(random(255),random(255),random(255)));
 
-  // random platforms, testing purposes, will revamp later
+  //creating all the platforms in list
+
   Platforms plat1 = new Platforms(0, 750, 1000, 50, color(random(255), random(255), random(255))); // ground  
   platforms.add(plat1);
   
@@ -23,25 +26,44 @@ void setup() {
   platforms.add(plat5);
   
   Platforms plat6 = new Platforms(0, 450, 800, 50, color(random(255), random(255), random(255)));
+  platforms.add(plat6);
+
 } 
 
 void draw() {
-  background(242, 225, 252);
-  for (Platforms p : platforms) {
-    p.display();
-  }
-=======
-        size(1000, 800);
-        platforms = new ArrayList<Platforms>();
-        player = new Player(width/2,height/2,color(random(255),random(255),random(255)));
-
-}
-
-void draw() {
         background(242, 225, 252);
+        
+        //display platforms
         for (Platforms p : platforms) {
           p.display();
         }
+        
+        // display and move player
         player.display();
->>>>>>> c14d21c9699bcd1862a927cc64be7f63c6df6beb
+        player.move();
+        
+        //testing purposes, display status of onGround
+        if (player.onGround) {text("TRUE",20,20);}
+}
+
+void keyPressed() {
+  switch (keyCode) {
+    case RIGHT:
+      player.right = true;
+    case LEFT:
+      player.left = true;
+    case UP:
+      player.up = true;
+   }
+}
+
+void keyReleased() {
+    switch (keyCode) {
+    case RIGHT:
+      player.right = false;
+    case LEFT:
+      player.left = false;
+    case UP:
+      player.up = false;
+   }
 }
