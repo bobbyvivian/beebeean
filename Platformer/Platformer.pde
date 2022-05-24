@@ -1,11 +1,12 @@
 ArrayList<Platforms> platforms;
 Player player;
+float playerSize;
 
 void setup() {
         size(1000, 800);
         platforms = new ArrayList<Platforms>();
-        
-        player = new Player(width/2,height/2,color(random(255),random(255),random(255)));
+        playerSize = 25;
+        player = new Player(playerSize/2,750-playerSize/2,color(random(255),random(255),random(255)));
 }
 
 void draw() {
@@ -25,5 +26,16 @@ void keyPressed() {
       player.left = true;
     case UP:
       player.up = true;
+   }
+}
+
+void keyReleased() {
+    switch (keyCode) {
+    case RIGHT:
+      player.right = false;
+    case LEFT:
+      player.left = false;
+    case UP:
+      player.up = false;
    }
 }
