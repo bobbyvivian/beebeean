@@ -7,7 +7,7 @@ public class Player {
     x = xpos;
     y = ypos;
     xSpeed = 2;
-    ySpeed = 2;
+    ySpeed = 0;
     gravity = .25;
     points = 0;
     rgb = col;
