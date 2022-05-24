@@ -22,6 +22,9 @@ void draw() {
         }
         player.display();
         player.move();
+        
+        //for testing purposes, display onGround
+        if (player.onGround) {text("TRUE",20,20);}
 }
 
 void keyPressed() {
