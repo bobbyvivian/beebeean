@@ -6,7 +6,6 @@ void setup() {
         platforms = new ArrayList<Platforms>();
         
         player = new Player(width/2,height/2,color(random(255),random(255),random(255)));
-        player.up = true;
 }
 
 void draw() {
@@ -16,4 +15,15 @@ void draw() {
         }
         player.display();
         player.move();
+}
+
+void keyPressed() {
+  switch (keyCode) {
+    case RIGHT:
+      player.right = true;
+    case LEFT:
+      player.left = true;
+    case UP:
+      player.up = true;
+   }
 }
