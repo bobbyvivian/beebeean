@@ -27,12 +27,12 @@ public class Player {
   public void move() {
     if (right) {
       // borders
-      if (x+xSpeed < width-playerSize/2) {
+      if (x+xSpeed < width) {
         x+=xSpeed;
       }
     }
     else if (left) {
-      if (x-xSpeed > playerSize/2) {
+      if (x-xSpeed > 0) {
         x-=xSpeed;
       }
     }
@@ -40,7 +40,7 @@ public class Player {
     // jump
     if (up) {
       if (ySpeed >= 0) {
-        if (y+ySpeed<height-playerSize/2) {
+        if (y+ySpeed<height) {
           y+=ySpeed;
         }
         ySpeed-=gravity;
