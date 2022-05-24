@@ -14,6 +14,11 @@ void setup() {
   Platforms plat3 = new Platforms(500, 650, 600, 50, color(random(255), random(255), random(255)));
   platforms.add(plat3);
   
+  Platforms plat4 = new Platforms(0, 550, 700, 50, color(random(255), random(255), random(255)));
+  platforms.add(plat4);
+  
+  //Platforms plat5 = new Platforms(0, 550, 900, 50, color(random(255), random(255), random(255)));
+  //platforms.add(plat5);
 } 
 
 void draw() {
