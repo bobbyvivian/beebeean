@@ -1,5 +1,5 @@
 public class Player {
-  float x,y,size,xSpeed,ySpeed,points;
+  float x,y,size,xSpeed,ySpeed,points,gravity;
   color rgb;
   boolean onGround, alive, left, right, up;
   
@@ -8,6 +8,7 @@ public class Player {
     y = ypos;
     xSpeed = 1;
     ySpeed = 1;
+    gravity = .15;
     points = 0;
     rgb = col;
     onGround = true;
@@ -38,6 +39,20 @@ public class Player {
     
     // jump
     if (up) {
+      if (ySpeed >= 0) {
+        if (y+ySpeed<height-size/2) {
+          y+=ySpeed;
+        }
+        ySpeed-=gravity;
+      }
+      
+      if (ySpeed <= 0 && !onGround) {
+        if (y-ySpeed>size/2) {
+          y-=ySpeed;
+        }        
+        ySpeed+=gravity;
+      }
+            
     }
   }
 }
