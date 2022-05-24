@@ -5,11 +5,15 @@ void setup() {
   platforms = new ArrayList<Platforms>();
 
   // random platforms, testing purposes, will revamp later
-  Platforms plat1 = new Platforms(0, 750, 1000, 75, color(random(255), random(255), random(255))); // ground  
+  Platforms plat1 = new Platforms(0, 750, 1000, 50, color(random(255), random(255), random(255))); // ground  
   platforms.add(plat1);
   
-  Platforms plat2 = new Platforms(0, 600, 400, 75, color(random(255), random(255), random(255)));
+  Platforms plat2 = new Platforms(0, 650, 400, 50, color(random(255), random(255), random(255)));
   platforms.add(plat2);
+  
+  Platforms plat3 = new Platforms(500, 650, 600, 50, color(random(255), random(255), random(255)));
+  platforms.add(plat3);
+  
 } 
 
 void draw() {
