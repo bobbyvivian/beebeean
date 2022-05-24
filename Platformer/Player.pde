@@ -6,8 +6,8 @@ public class Player {
   public Player(float xpos, float ypos, color col) {
     x = xpos;
     y = ypos;
-    xSpeed = 1;
-    ySpeed = 1;
+    xSpeed = 2;
+    ySpeed = 2;
     gravity = .25;
     points = 0;
     rgb = col;
@@ -39,16 +39,16 @@ public class Player {
     
     // jump
     if (up) {
-      if (ySpeed >= 0) {
-        if (y+ySpeed<height) {
-          y+=ySpeed;
+      if (ySpeed > 0) {
+        if (y-ySpeed>0) {
+          y-=ySpeed;
         }
         ySpeed-=gravity;
       }
       
       if (ySpeed <= 0 && !onGround) {
-        if (y-ySpeed>playerSize/2) {
-          y-=ySpeed;
+        if (y+ySpeed<height) {
+          y+=ySpeed;
         }        
         ySpeed+=gravity;
       }
@@ -59,7 +59,7 @@ public class Player {
   public void onGround() {
     onGround = false;
     for (Platforms p : platforms) {
-      if (y+playerSize==p.y-p.sizeY) {
+      if (y+playerSize==p.y) {
         onGround = true;
       }
     }

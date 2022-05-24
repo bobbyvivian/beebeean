@@ -5,7 +5,7 @@ float playerSize;
 void setup() {
   size(1000, 800);
   platforms = new ArrayList<Platforms>();
-  playerSize = 25;
+  playerSize = 35;
   player = new Player(playerSize,750-playerSize,color(random(255),random(255),random(255)));
 
   //creating all the platforms in list
@@ -30,6 +30,12 @@ void draw() {
         
         //testing purposes, display status of onGround
         if (player.onGround) {text("TRUE",20,20);}
+        else {text("FALSE",20,20);}
+        text(player.x,20,40);
+        text(player.y,20,60);
+        text(platforms.get(0).y,20,80);
+        
+        
 }
 
 void keyPressed() {
