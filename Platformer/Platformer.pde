@@ -8,7 +8,7 @@ void setup() {
   platforms = new ArrayList<Platforms>();
   spikes = new ArrayList<Spikes>();
   playerSize = 35;
-  player = new Player(playerSize, 750-playerSize, color(random(255), random(255), random(255)));
+  player = new Player(playerSize, 700-playerSize, color(random(255), random(255), random(255)));
 
   //creating all the platforms in list
 

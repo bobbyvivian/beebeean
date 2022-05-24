@@ -25,6 +25,7 @@ public class Player {
   }
 
   public void move() {
+    onGrou
     if (right) {
       // borders
       if (x+xSpeed+playerSize < width) {
@@ -38,6 +39,11 @@ public class Player {
     }
 
     // jump
+    if (!onGround) {
+        if (y+ySpeed<height) {
+          y+=ySpeed;
+        }   
+    }
     if (up) {
       if (ySpeed > 0) {
         if (y-ySpeed>0) {
