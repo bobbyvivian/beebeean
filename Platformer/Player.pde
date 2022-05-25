@@ -1,17 +1,18 @@
 public class Player {
   float x, y, xSpeed, ySpeed, points, gravity;
   color rgb;
-  boolean onGround, alive, left, right, up;
+  boolean onGround, alive, left, right, up, hitUp;
 
   public Player(float xpos, float ypos, color col) {
     x = xpos;
     y = ypos;
     xSpeed = 2;
-    ySpeed = 0;
-    gravity = .25;
+    ySpeed = 1;
+    gravity = 1;
     points = 0;
     rgb = col;
     onGround = true;
+    hitUp = false;
     alive = true;
     left = false;
     right = false;
@@ -25,6 +26,7 @@ public class Player {
   }
 
   public void move() {
+    onGround();
     if (right) {
       // borders
       if (x+xSpeed+playerSize < width) {
@@ -38,20 +40,33 @@ public class Player {
     }
 
     // jump
+    if (onGround) {
+      ySpeed = 5;
+    }
+    if (!onGround) {
+        if (y+ySpeed<height) {
+          y+=ySpeed;
+          ySpeed+=gravity;
+          
+        }   
+    }
     if (up) {
       if (ySpeed > 0) {
         if (y-ySpeed>0) {
           y-=ySpeed;
+          ySpeed-=gravity;
+          y-=ySpeed;
+          ySpeed-=gravity;          
+          
         }
-        ySpeed-=gravity;
       }
 
-      if (ySpeed <= 0 && !onGround) {
-        if (y+ySpeed<height) {
-          y+=ySpeed;
-        }        
-        ySpeed+=gravity;
-      }
+      //if (ySpeed <= 1 && !onGround) {
+      //  if (y+ySpeed<height) {
+      //    y+=ySpeed;
+      //  }        
+      //  ySpeed+=gravity;
+      //}
     }
   }
 
@@ -59,9 +74,18 @@ public class Player {
   public void onGround() {
     onGround = false;
     for (Platforms p : platforms) {
-      if (y+playerSize==p.y) {
+      if (y+playerSize==p.y && x<=p.x+p.sizeX && x+playerSize>=p.x) {
         onGround = true;
       }
+      if (y+playerSize>p.y&&y+playerSize<p.y+p.sizeY&&x<=p.x+p.sizeX && x+playerSize>=p.x) {
+        onGround = true;
+      }
+      //if (x+playerSize>=p.x && x<=p.x+p.sizeX && y<=p.y+p.sizeY && y+playerSize>=p.y){
+      //  hitBound = true;
+      //}
+      //if ((y<=p.y+p.sizeY && y>=p.y) || (y+playerSize>=p.y && y+playerSize<=p.y+p.sizeY)) {
+      //  hitUp = true;
+      //}
     }
   }
 }
