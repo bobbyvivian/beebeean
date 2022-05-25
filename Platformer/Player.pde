@@ -7,8 +7,8 @@ public class Player {
     x = xpos;
     y = ypos;
     xSpeed = 2;
-    ySpeed = 0;
-    gravity = .25;
+    ySpeed = 5;
+    gravity = 2;
     points = 0;
     rgb = col;
     onGround = true;
@@ -25,7 +25,7 @@ public class Player {
   }
 
   public void move() {
-    onGrou
+    onGround();
     if (right) {
       // borders
       if (x+xSpeed+playerSize < width) {
@@ -39,6 +39,9 @@ public class Player {
     }
 
     // jump
+    if (onGround) {
+      ySpeed = 5;
+    }
     if (!onGround) {
         if (y+ySpeed<height) {
           y+=ySpeed;
@@ -67,6 +70,9 @@ public class Player {
     for (Platforms p : platforms) {
       if (y+playerSize==p.y) {
         onGround = true;
+      }
+      if (y+playerSize>p.y&&y+playerSize<p.y+p.sizeY) {
+        onGround = false;
       }
     }
   }
