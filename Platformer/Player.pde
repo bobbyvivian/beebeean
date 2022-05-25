@@ -1,17 +1,18 @@
 public class Player {
   float x, y, xSpeed, ySpeed, points, gravity;
   color rgb;
-  boolean onGround, alive, left, right, up;
+  boolean onGround, alive, left, right, up, hitUp;
 
   public Player(float xpos, float ypos, color col) {
     x = xpos;
     y = ypos;
     xSpeed = 2;
-    ySpeed = 5;
+    ySpeed = 1;
     gravity = 1;
     points = 0;
     rgb = col;
     onGround = true;
+    hitUp = false;
     alive = true;
     left = false;
     right = false;
@@ -54,16 +55,18 @@ public class Player {
         if (y-ySpeed>0) {
           y-=ySpeed;
           ySpeed-=gravity;
+          y-=ySpeed;
+          ySpeed-=gravity;          
           
         }
       }
 
-      if (ySpeed <= 0 && !onGround) {
-        if (y+ySpeed<height) {
-          y+=ySpeed;
-        }        
-        ySpeed+=gravity;
-      }
+      //if (ySpeed <= 1 && !onGround) {
+      //  if (y+ySpeed<height) {
+      //    y+=ySpeed;
+      //  }        
+      //  ySpeed+=gravity;
+      //}
     }
   }
 
@@ -77,6 +80,12 @@ public class Player {
       if (y+playerSize>p.y&&y+playerSize<p.y+p.sizeY&&x<=p.x+p.sizeX && x+playerSize>=p.x) {
         onGround = true;
       }
+      //if (x+playerSize>=p.x && x<=p.x+p.sizeX && y<=p.y+p.sizeY && y+playerSize>=p.y){
+      //  hitBound = true;
+      //}
+      //if ((y<=p.y+p.sizeY && y>=p.y) || (y+playerSize>=p.y && y+playerSize<=p.y+p.sizeY)) {
+      //  hitUp = true;
+      //}
     }
   }
 }
