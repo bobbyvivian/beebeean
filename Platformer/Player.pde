@@ -50,28 +50,23 @@ public class Player {
         }   
     }
     if (up) {
-      if (ySpeed > 0) {
         if (y-ySpeed>0) {
           y-=ySpeed;
           ySpeed-=gravity;
-
-        }
       }
-      
-      if (hitUp) {
+    }
+    //if (ySpeed <= 1 && !onGround) {
+    //    if (y+ySpeed<height) {
+    //      y+=ySpeed;
+    //    }        
+    //    ySpeed+=gravity;
+    //}    
+    if (hitUp) {
         if (y+ySpeed<750) {
           y+=ySpeed;
           ySpeed+=gravity;
         }           
-      }
-
-      //if (ySpeed <= 1 && !onGround) {
-      //  if (y+ySpeed<height) {
-      //    y+=ySpeed;
-      //  }        
-      //  ySpeed+=gravity;
-      //}
-    }
+    }    
   }
 
 
