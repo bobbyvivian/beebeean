@@ -57,6 +57,7 @@ public class Player {
     //falling
     if (!onGround) {
         if (y+ySpeed<750) {
+          ySpeed = Math.abs(ySpeed);
           y+=ySpeed;
           ySpeed+=gravity;
         }   
@@ -70,14 +71,12 @@ public class Player {
     // actually jumping
     if (jump) {
         if (countdown >= 60) {
+          ySpeed = Math.abs(ySpeed)*-1;
           if (y-ySpeed>0) {
             if (ySpeed<0) {
               y+=ySpeed;
+              ySpeed+=gravity;
             }
-            else {
-              y-=ySpeed;
-            }
-            ySpeed-=gravity;          
           }                
         }
       if(countdown > 0){
