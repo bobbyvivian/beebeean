@@ -74,7 +74,14 @@ public class Player {
     } 
     
     ySpeed += acceleration;
-    y+=ySpeed;
+    
+    int pInd = fallInGround(y+ySpeed+playerSize); 
+    if (pInd==-1) {
+      y+=ySpeed;
+    }
+    else {
+      y = platforms.get(pInd).y - playerSize;
+    }
     
     if(countdown > 0){
       countdown --;
@@ -99,6 +106,17 @@ public class Player {
         hitUp = true;
       }
     }
+  }
+  
+  public int fallInGround(float ypos) {
+    Platforms p;
+    for (int i = 0; i<platforms.size(); i++) {
+      p = platforms.get(i);
+      if (ypos>p.y&&ypos<p.y+p.sizeY&&x<=p.x+p.sizeX && x+playerSize>=p.x) {
+        return i;
+      }
+    }
+    return -1;
   }
   
 }
