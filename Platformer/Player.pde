@@ -103,9 +103,9 @@ public class Player {
       if (y+playerSize>p.y&&y+playerSize<p.y+p.sizeY&&x<=p.x+p.sizeX && x+playerSize>=p.x) {
         onGround = true;
       }
-      //if ((y<=p.y+p.sizeY && y>=p.y && x<=p.x+p.sizeX && x+playerSize>=p.x)) {
-      //  hitUp = true;
-      //}
+      if ((y+ySpeed<=p.y+p.sizeY && y+ySpeed>=p.y && x<=p.x+p.sizeX && x+playerSize>=p.x)) {
+        hitUp = true;
+      }
     }
   }
   
@@ -118,15 +118,6 @@ public class Player {
       }
     }
     return -1;
-  }
-  
-  public boolean hitUp(float ypos) {
-    for (Platforms p: platforms) {
-      if (ypos>p.y+p.sizeY&&ypos<p.y&&x<=p.x+p.sizeX && x+playerSize>=p.x) {
-       return true; 
-      }
-    }
-    return false;
   }
   
 }
