@@ -70,6 +70,7 @@ public class Player {
     }
     if (hitUp) {
       acceleration = 0.2;
+    
     } 
     
     ySpeed += acceleration;
@@ -77,41 +78,7 @@ public class Player {
     
     if(countdown > 0){
       countdown --;
-    }   
-      
-   
-    //if (onGround) {
-    //  ySpeed = 2;
-    //  gravity = 1;
-    //}
-    ////falling
-    //if (!onGround) {
-    //    if (y+ySpeed<750) {
-    //      ySpeed = Math.abs(ySpeed);
-    //      y+=ySpeed;
-    //      ySpeed+=gravity;
-    //    }   
-    //}
-    //// initiation of jumping (button is pressed)
-    //if (up) {
-    //  if (player.countdown==0) {
-    //    player.countdown+=120;
-    //  }      
-    //}
-    //// actually jumping
-    //if (jump) {
-    //    if (countdown >= 60) {
-    //      ySpeed = Math.abs(ySpeed)*-1;
-    //      if (y+ySpeed>0&&y+ySpeed<750) {
-    //          y+=ySpeed;
-    //          ySpeed+=gravity;
-            
-    //      }                
-    //    }
-      //if(countdown > 0){
-      //  countdown --;
-      //}
-    //}   
+    }     
   }
 
 
