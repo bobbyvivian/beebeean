@@ -11,24 +11,35 @@ void setup() {
   player = new Player(playerSize, 750-playerSize, color(random(255), random(255), random(255)));
 
   //creating all the platforms in list
-
   Platforms plat1 = new Platforms(0, 750, 1000, 50, color(random(255), random(255), random(255))); // ground  
   platforms.add(plat1);
-
-  Platforms plat2 = new Platforms(0, 650, 400, 50, color(random(255), random(255), random(255)));
+  
+  Platforms plat2 = new Platforms(0, 600, 400, 50, color(random(255), random(255), random(255))); //second
   platforms.add(plat2);
-
-  Platforms plat3 = new Platforms(500, 650, 600, 50, color(random(255), random(255), random(255)));
+  
+  Platforms plat3 = new Platforms(550, 600, 800, 50, color(random(255), random(255), random(255))); //second
   platforms.add(plat3);
-
-  Platforms plat4 = new Platforms(0, 550, 700, 50, color(random(255), random(255), random(255)));
+  
+  Platforms plat4 = new Platforms(0, 450, 700, 50, color(random(255), random(255), random(255))); //third
   platforms.add(plat4);
-
-  Platforms plat5 = new Platforms(0, 450, 200, 50, color(random(255), random(255), random(255)));
+  
+  Platforms plat5 = new Platforms(850, 450, 200, 50, color(random(255), random(255), random(255))); //third
   platforms.add(plat5);
-
-  Platforms plat6 = new Platforms(0, 450, 800, 50, color(random(255), random(255), random(255)));
+  
+  Platforms plat6 = new Platforms(150, 300, 900, 50, color(random(255), random(255), random(255))); //fourth
   platforms.add(plat6);
+  
+  Platforms plat7 = new Platforms(0, 150, 300, 50, color(random(255), random(255), random(255))); //fifth
+  platforms.add(plat7);
+  
+  Platforms plat8 = new Platforms(450, 150, 300, 50, color(random(255), random(255), random(255))); //fifth
+  platforms.add(plat8);
+    
+  Platforms plat9 = new Platforms(900, 150, 300, 50, color(random(255), random(255), random(255))); //fifth
+  platforms.add(plat9); 
+  
+  Platforms plat10 = new Platforms(0, 0, 1000, 50, color(random(255), random(255), random(255))); //ceiling
+  platforms.add(plat10);      
 } 
 
 void draw() {
