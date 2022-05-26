@@ -68,17 +68,28 @@ public class Player {
     if (jump) {
       acceleration = -0.2;
     }
+    
     if (hitUp) {
       acceleration = 0.2;
-    
-    } 
-    
-    ySpeed += acceleration;
-    y+=ySpeed;
-    
-    if(countdown > 0){
-      countdown --;
-    }     
+      ySpeed += acceleration;
+      y+=ySpeed;            
+    }
+    else {
+      ySpeed += acceleration;
+      
+      // make sure it doesn't fall in ground
+      int pInd = fallInGround(y+ySpeed+playerSize); 
+      if (pInd==-1) {
+        y+=ySpeed;
+      }
+      else {
+        y = platforms.get(pInd).y - playerSize;
+      }
+      
+      if(countdown > 0){
+        countdown --;
+      }        
+    }
   }
 
 
@@ -92,13 +103,21 @@ public class Player {
       if (y+playerSize>p.y&&y+playerSize<p.y+p.sizeY&&x<=p.x+p.sizeX && x+playerSize>=p.x) {
         onGround = true;
       }
-      //if (x+playerSize>=p.x && x<=p.x+p.sizeX && y<=p.y+p.sizeY && y+playerSize>=p.y){
-      //  hitBound = true;
-      //}
       if ((y<=p.y+p.sizeY && y>=p.y && x<=p.x+p.sizeX && x+playerSize>=p.x)) {
         hitUp = true;
       }
     }
+  }
+  
+  public int fallInGround(float ypos) {
+    Platforms p;
+    for (int i = 0; i<platforms.size(); i++) {
+      p = platforms.get(i);
+      if (ypos>p.y&&ypos<p.y+p.sizeY&&x<=p.x+p.sizeX && x+playerSize>=p.x) {
+        return i;
+      }
+    }
+    return -1;
   }
   
 }
