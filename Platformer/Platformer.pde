@@ -2,6 +2,7 @@ ArrayList<Platforms> platforms;
 ArrayList<Spikes> spikes;
 Player player;
 float playerSize;
+Door door;
 
 void setup() {
   size(1000, 800);
@@ -38,8 +39,10 @@ void setup() {
   Platforms plat9 = new Platforms(900, 150, 300, 50, color(random(255), random(255), random(255))); //fifth
   platforms.add(plat9); 
   
-  Platforms plat10 = new Platforms(0, 0, 1000, 50, color(random(255), random(255), random(255))); //ceiling
-  platforms.add(plat10);      
+  //Platforms plat10 = new Platforms(0, 0, 1000, 50, color(random(255), random(255), random(255))); //ceiling
+  //platforms.add(plat10); 
+  
+  door = new Door(0, 50, 75, 100, color(#A08A69)); 
 } 
 
 void draw() {
@@ -53,6 +56,9 @@ void draw() {
   // display and move player
   player.display();
   player.move();
+  
+  //display door
+  door.display();
 
   //testing purposes, display status of onGround
   if (player.onGround) {
