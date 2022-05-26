@@ -8,8 +8,8 @@ public class Player {
     x = xpos;
     y = ypos;
     xSpeed = 2;
-    ySpeed = 1;
-    gravity = 1;
+    ySpeed = 2;
+    gravity = .5;
     points = 0;
     rgb = col;
     onGround = true;
@@ -31,9 +31,13 @@ public class Player {
   public void move() {
     onGround();
     
-    if (countdown>=0) {
+    if (countdown>0) {
       jump = true;
     }
+    else {
+      jump = false;
+    }
+    
     if (right) {
       // borders
       if (x+xSpeed+playerSize < width) {
@@ -46,32 +50,41 @@ public class Player {
       }
     }
 
-    // jump
     if (onGround) {
-      ySpeed = 1;
+      ySpeed = 2;
+      gravity = 1;
     }
+    //falling
     if (!onGround) {
         if (y+ySpeed<750) {
           y+=ySpeed;
           ySpeed+=gravity;
         }   
     }
+    // initiation of jumping (button is pressed)
     if (up) {
       if (player.countdown==0) {
-        player.countdown+=60;
+        player.countdown+=120;
       }      
     }
+    // actually jumping
     if (jump) {
-        if (countdown >= 30) {
+        if (countdown >= 60) {
           if (y-ySpeed>0) {
-            y-=ySpeed;
-            ySpeed-=gravity;
+            if (ySpeed<0) {
+              y+=ySpeed;
+            }
+            else {
+              y-=ySpeed;
+            }
+            ySpeed-=gravity;          
           }                
         }
       if(countdown > 0){
         countdown --;
       }
     }
+ 
 
 
     if (hitUp) {
