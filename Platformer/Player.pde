@@ -1,7 +1,8 @@
 public class Player {
   float x, y, xSpeed, ySpeed, points, gravity;
   color rgb;
-  boolean onGround, alive, left, right, up, hitUp;
+  boolean onGround, alive, left, right, up, hitUp, jump;
+  int countdown;
 
   public Player(float xpos, float ypos, color col) {
     x = xpos;
@@ -17,6 +18,8 @@ public class Player {
     left = false;
     right = false;
     up = false;
+    countdown = 0;
+    jump = false;
   }
 
   public void display() {
@@ -27,6 +30,10 @@ public class Player {
 
   public void move() {
     onGround();
+    
+    if (countdown>=0) {
+      jump = true;
+    }
     if (right) {
       // borders
       if (x+xSpeed+playerSize < width) {
@@ -50,17 +57,23 @@ public class Player {
         }   
     }
     if (up) {
-        if (y-ySpeed>0) {
-          y-=ySpeed;
-          ySpeed-=gravity;
+      if (player.countdown==0) {
+        player.countdown+=60;
+      }      
+    }
+    if (jump) {
+        if (countdown >= 30) {
+          if (y-ySpeed>0) {
+            y-=ySpeed;
+            ySpeed-=gravity;
+          }                
+        }
+      if(countdown > 0){
+        countdown --;
       }
     }
-    //if (ySpeed <= 1 && !onGround) {
-    //    if (y+ySpeed<height) {
-    //      y+=ySpeed;
-    //    }        
-    //    ySpeed+=gravity;
-    //}    
+
+
     if (hitUp) {
         if (y+ySpeed<750) {
           y+=ySpeed;
