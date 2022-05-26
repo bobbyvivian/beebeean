@@ -41,38 +41,38 @@ public class Player {
 
     // jump
     if (onGround) {
-      ySpeed = 5;
+      ySpeed = 1;
     }
     if (!onGround) {
-        if (y+ySpeed<height) {
+        if (y+ySpeed<750) {
           y+=ySpeed;
           ySpeed+=gravity;
-          
         }   
     }
     if (up) {
-      if (ySpeed > 0) {
         if (y-ySpeed>0) {
           y-=ySpeed;
           ySpeed-=gravity;
-          y-=ySpeed;
-          ySpeed-=gravity;          
-          
-        }
       }
-
-      //if (ySpeed <= 1 && !onGround) {
-      //  if (y+ySpeed<height) {
-      //    y+=ySpeed;
-      //  }        
-      //  ySpeed+=gravity;
-      //}
     }
+    //if (ySpeed <= 1 && !onGround) {
+    //    if (y+ySpeed<height) {
+    //      y+=ySpeed;
+    //    }        
+    //    ySpeed+=gravity;
+    //}    
+    if (hitUp) {
+        if (y+ySpeed<750) {
+          y+=ySpeed;
+          ySpeed+=gravity;
+        }           
+    }    
   }
 
 
   public void onGround() {
     onGround = false;
+    hitUp = false;
     for (Platforms p : platforms) {
       if (y+playerSize==p.y && x<=p.x+p.sizeX && x+playerSize>=p.x) {
         onGround = true;
@@ -83,9 +83,10 @@ public class Player {
       //if (x+playerSize>=p.x && x<=p.x+p.sizeX && y<=p.y+p.sizeY && y+playerSize>=p.y){
       //  hitBound = true;
       //}
-      //if ((y<=p.y+p.sizeY && y>=p.y) || (y+playerSize>=p.y && y+playerSize<=p.y+p.sizeY)) {
-      //  hitUp = true;
-      //}
+      if ((y<=p.y+p.sizeY && y>=p.y && x<=p.x+p.sizeX && x+playerSize>=p.x)) {
+        hitUp = true;
+      }
     }
   }
+  
 }
