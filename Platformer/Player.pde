@@ -23,15 +23,18 @@ public class Player {
     jump = false;
   }
 
-  public void display() {
-    fill(rgb);
-    noStroke();
-    rect(x, y, playerSize, playerSize);
+  public void display(boolean a) {
+    if (a) {
+      fill(rgb);
+      noStroke();
+      rect(x, y, playerSize, playerSize);
+    }
   }
 
   public void move() {
     onGround();
-    
+    //check to see if player dead
+    player.dead();    
     if (countdown>30) {
       jump = true;
     }
@@ -118,6 +121,16 @@ public class Player {
       }
     }
     return -1;
+  }
+  
+  public void dead() {
+    for (Spikes s : spikes) {
+      //coming from right
+      if (y+playerSize<=s.y+50&&y+playerSize>=s.y&&x+playerSize>=s.x&&x+playerSize<=s.x+90) {
+        alive = false;
+        
+      }
+    }
   }
   
 }

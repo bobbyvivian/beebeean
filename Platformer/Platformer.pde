@@ -59,8 +59,9 @@ void draw() {
   }
 
   // display and move player
-  player.display();
+  player.display(player.alive);
   player.move();
+
   
   //display door
   door.display();
@@ -75,7 +76,13 @@ void draw() {
     text("TRUE", 20, 10);
   } else {
     text("FALSE", 20, 10);
-  }  
+  } 
+  if (player.alive) {
+    text("TRUE", 20, 100);
+  }
+  else {
+    text("FALSE", 20, 100);    
+  }
   text(player.x, 20, 40);
   text(player.y, 20, 60);
   text(platforms.get(0).y, 20, 80);
