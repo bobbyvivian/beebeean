@@ -75,11 +75,7 @@ void draw() {
   } else {
     text("FALSE", 20, 20);
   }
-  if (player.hitUp) {
-    text("TRUE", 20, 10);
-  } else {
-    text("FALSE", 20, 10);
-  } 
+
   text(player.x, 20, 40);
   text(player.y, 20, 60);
 

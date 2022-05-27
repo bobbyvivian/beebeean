@@ -1,7 +1,7 @@
 public class Player {
   float x, y, xSpeed, ySpeed, points, acceleration;
   color rgb;
-  boolean onGround, alive, left, right, up, hitUp, jump, win;
+  boolean onGround, alive, left, right, up, jump, win;
   int countdown;
 
   public Player(float xpos, float ypos, color col) {
@@ -13,7 +13,6 @@ public class Player {
     points = 0;
     rgb = col;
     onGround = true;
-    hitUp = false;
     alive = true;
     left = false;
     right = false;
@@ -79,7 +78,9 @@ public class Player {
       acceleration = -0.2;
     }
     
-    if (hitUp) {
+    int indP = hitUp();
+    if (indP>-1) {
+      y = platforms.get(indP).y+ platforms.get(indP).sizeY;
       acceleration = 0.2;
       ySpeed += acceleration;
       y+=ySpeed;            
@@ -95,17 +96,15 @@ public class Player {
       else {
         y = platforms.get(pInd).y - playerSize;
       }
-      
+    }
       if(countdown > 0){
         countdown --;
       }        
-    }
   }
 
 
   public void onGround() {
     onGround = false;
-    hitUp = false;
     for (Platforms p : platforms) {
       if (y+playerSize==p.y && x<=p.x+p.sizeX && x+playerSize>=p.x) {
         onGround = true;
@@ -113,10 +112,18 @@ public class Player {
       if (y+playerSize>p.y&&y+playerSize<p.y+p.sizeY&&x<=p.x+p.sizeX && x+playerSize>=p.x) {
         onGround = true;
       }
-      if ((y+ySpeed<=p.y+p.sizeY && y+ySpeed>=p.y && x<=p.x+p.sizeX && x+playerSize>=p.x)) {
-        hitUp = true;
-      }
     }
+  }
+  
+  public int hitUp() {
+    Platforms p;    
+    for (int i = 0; i<platforms.size(); i++) {
+      p = platforms.get(i);    
+      if ((y+ySpeed<=p.y+p.sizeY && y+ySpeed>=p.y && x<=p.x+p.sizeX && x+playerSize>=p.x)) {
+        return i;
+      }  
+    }
+    return -1;
   }
   
   public int fallInGround(float ypos) {
