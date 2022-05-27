@@ -31,10 +31,10 @@ void setup() {
   Platforms plat5 = new Platforms(850, 450, 200, 50, color(random(255), random(255), random(255))); //third
   platforms.add(plat5);
   
-  Platforms plat6 = new Platforms(150, 300, 900, 50, color(random(255), random(255), random(255))); //fourth
+  Platforms plat6 = new Platforms(150, 300, 400, 50, color(random(255), random(255), random(255))); //fourth
   platforms.add(plat6);
   
-  Platforms plat7 = new Platforms(0, 150, 300, 50, color(random(255), random(255), random(255))); //fifth
+  Platforms plat7 = new Platforms(0, 150, 280, 50, color(random(255), random(255), random(255))); //fifth
   platforms.add(plat7);
   
   Platforms plat8 = new Platforms(450, 150, 300, 50, color(random(255), random(255), random(255))); //fifth
@@ -45,8 +45,20 @@ void setup() {
   
   Spikes spike1 = new Spikes(width/2-50,700);
   spikes.add(spike1);
+
+  Spikes spike2 = new Spikes(10,550);
+  spikes.add(spike2);
   
-  door = new Door(0, 50, 75, 100, color(#A08A69)); 
+  Spikes spike3 = new Spikes(width-200,550);
+  spikes.add(spike3);
+  
+  Spikes spike4 = new Spikes(width/2-200,250);
+  spikes.add(spike4);  
+  
+  Spikes spike5 = new Spikes(width-400,400);
+  spikes.add(spike5);  
+  
+  door = new Door(0, 50, 75, 100, color(143, 92, 84)); 
 } 
 
 void draw() {
@@ -70,14 +82,9 @@ void draw() {
   door.display();
 
   //testing purposes, display status of onGround
-  if (player.onGround) {
-    text("TRUE", 20, 20);
-  } else {
-    text("FALSE", 20, 20);
-  }
 
-  text(player.x, 20, 40);
-  text(player.y, 20, 60);
+  text(player.x, 20, 20);
+  text(player.y, 20, 40);
 
   // if player wins, will display victory screen
   if (player.win) {
