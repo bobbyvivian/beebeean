@@ -1,7 +1,7 @@
 public class Player {
-  float x, y, xSpeed, ySpeed, points, gravity, acceleration;
+  float x, y, xSpeed, ySpeed, points, acceleration;
   color rgb;
-  boolean onGround, alive, left, right, up, hitUp, jump;
+  boolean onGround, alive, left, right, up, hitUp, jump, win;
   int countdown;
 
   public Player(float xpos, float ypos, color col) {
@@ -9,7 +9,6 @@ public class Player {
     y = ypos;
     xSpeed = 2;
     ySpeed = 0;
-    gravity = .5;
     acceleration = 0;
     points = 0;
     rgb = col;
@@ -21,6 +20,7 @@ public class Player {
     up = false;
     countdown = 0;
     jump = false;
+    win = false;
   }
 
   public void display(boolean a) {
@@ -139,6 +139,13 @@ public class Player {
       if (y<=s.y+50&&y>=s.y&&x>=s.x&&x<=s.x+90) {
         alive = false;        
       }      
+    }
+  }
+  
+  public void win() {
+    //coming from right
+    if (y<=door.y+door.sizeY&&y>=door.y&&x<=door.x+door.sizeX&&x>=door.x) {
+      win = true;
     }
   }
   
