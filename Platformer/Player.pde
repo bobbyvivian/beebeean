@@ -23,15 +23,18 @@ public class Player {
     jump = false;
   }
 
-  public void display() {
-    fill(rgb);
-    noStroke();
-    rect(x, y, playerSize, playerSize);
+  public void display(boolean a) {
+    if (a) {
+      fill(rgb);
+      noStroke();
+      rect(x, y, playerSize, playerSize);
+    }
   }
 
   public void move() {
     onGround();
-    
+    //check to see if player dead
+    player.dead();    
     if (countdown>30) {
       jump = true;
     }
@@ -103,7 +106,7 @@ public class Player {
       if (y+playerSize>p.y&&y+playerSize<p.y+p.sizeY&&x<=p.x+p.sizeX && x+playerSize>=p.x) {
         onGround = true;
       }
-      if ((y<=p.y+p.sizeY && y>=p.y && x<=p.x+p.sizeX && x+playerSize>=p.x)) {
+      if ((y+ySpeed<=p.y+p.sizeY && y+ySpeed>=p.y && x<=p.x+p.sizeX && x+playerSize>=p.x)) {
         hitUp = true;
       }
     }
@@ -118,6 +121,25 @@ public class Player {
       }
     }
     return -1;
+  }
+  
+  public void dead() {
+    for (Spikes s : spikes) {
+      //coming from right
+      if (y+playerSize<=s.y+50&&y+playerSize>=s.y&&x+playerSize>=s.x&&x+playerSize<=s.x+90) {
+        alive = false;        
+      }
+      if (y<=s.y+50&&y>=s.y&&x+playerSize>=s.x&&x+playerSize<=s.x+90) {
+        alive = false;        
+      }     
+      //coming from left
+      if (y+playerSize<=s.y+50&&y+playerSize>=s.y&&x>=s.x&&x<=s.x+90) {
+        alive = false;        
+      }
+      if (y<=s.y+50&&y>=s.y&&x>=s.x&&x<=s.x+90) {
+        alive = false;        
+      }      
+    }
   }
   
 }
