@@ -127,9 +127,18 @@ public class Player {
     for (Spikes s : spikes) {
       //coming from right
       if (y+playerSize<=s.y+50&&y+playerSize>=s.y&&x+playerSize>=s.x&&x+playerSize<=s.x+90) {
-        alive = false;
-        
+        alive = false;        
       }
+      if (y<=s.y+50&&y>=s.y&&x+playerSize>=s.x&&x+playerSize<=s.x+90) {
+        alive = false;        
+      }     
+      //coming from left
+      if (y+playerSize<=s.y+50&&y+playerSize>=s.y&&x>=s.x&&x<=s.x+90) {
+        alive = false;        
+      }
+      if (y<=s.y+50&&y>=s.y&&x>=s.x&&x<=s.x+90) {
+        alive = false;        
+      }      
     }
   }
   
