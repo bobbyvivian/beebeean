@@ -35,6 +35,9 @@ public class Player {
     onGround();
     //check to see if player dead
     player.dead();    
+    //check to see if player won
+    player.win();
+    
     if (countdown>30) {
       jump = true;
     }

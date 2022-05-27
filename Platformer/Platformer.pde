@@ -3,6 +3,7 @@ ArrayList<Spikes> spikes;
 Player player;
 float playerSize;
 Door door;
+WinScreen screen;
 
 void setup() {
   size(1000, 800);
@@ -10,7 +11,8 @@ void setup() {
   spikes = new ArrayList<Spikes>();
   playerSize = 30;
   player = new Player(playerSize, 750-playerSize, color(random(255), random(255), random(255)));
-
+  screen = new WinScreen();
+  
   //creating all the platforms in list
   Platforms plat1 = new Platforms(0, 750, 1000, 50, color(random(255), random(255), random(255))); // ground  
   platforms.add(plat1);
@@ -61,10 +63,14 @@ void draw() {
   // display and move player
   player.display(player.alive);
   player.move();
-
   
   //display door
   door.display();
+  
+  // if player wins, will display victory screen
+  if (player.win) {
+    screen.display();
+  }
 
   //testing purposes, display status of onGround
   if (player.onGround) {
@@ -77,15 +83,8 @@ void draw() {
   } else {
     text("FALSE", 20, 10);
   } 
-  if (player.alive) {
-    text("TRUE", 20, 100);
-  }
-  else {
-    text("FALSE", 20, 100);    
-  }
   text(player.x, 20, 40);
   text(player.y, 20, 60);
-  text(platforms.get(0).y, 20, 80);
 }
 
 void keyPressed() {
