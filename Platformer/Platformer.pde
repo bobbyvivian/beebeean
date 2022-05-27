@@ -25,7 +25,7 @@ void setup() {
   Platforms plat3 = new Platforms(600, 600, 800, 50, color(random(255), random(255), random(255))); //second
   platforms.add(plat3);
   
-  Platforms plat4 = new Platforms(200, 450, 400, 50, color(random(255), random(255), random(255))); //third
+  Platforms plat4 = new Platforms(150, 450, 600, 50, color(random(255), random(255), random(255))); //third
   platforms.add(plat4);
   
   Platforms plat5 = new Platforms(850, 450, 200, 50, color(random(255), random(255), random(255))); //third
