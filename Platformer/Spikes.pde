@@ -2,11 +2,11 @@ public class Spikes {
   float x,y,sizeX,sizeY;
   color rgb;
   
-  public Spikes(float xpos, float ypos, float w, float h) {
+  public Spikes(float xpos, float ypos) {
     x = xpos;
     y = ypos;
-    sizeX = w;
-    sizeY = h;
+    sizeX = 90;
+    sizeY = 50;
     rgb = color(205, 191, 222);
   }
   
