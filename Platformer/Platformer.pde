@@ -66,11 +66,6 @@ void draw() {
   
   //display door
   door.display();
-  
-  // if player wins, will display victory screen
-  if (player.win) {
-    screen.display();
-  }
 
   //testing purposes, display status of onGround
   if (player.onGround) {
@@ -85,8 +80,12 @@ void draw() {
   } 
   text(player.x, 20, 40);
   text(player.y, 20, 60);
-}
 
+  // if player wins, will display victory screen
+  if (player.win) {
+    screen.display();
+  }
+}  
 void keyPressed() {
   switch (keyCode) {
   case RIGHT:
