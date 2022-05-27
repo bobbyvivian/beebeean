@@ -61,6 +61,9 @@ void setup() {
   Spikes spike5 = new Spikes(width-400,400);
   spikes.add(spike5);  
   
+  Spikes spike6 = new Spikes(width-100,400);
+  spikes.add(spike6);
+  
   Strawberries berry1 = new Strawberries(width/2+100,700);
   strawberries.add(berry1);    
   
