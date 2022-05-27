@@ -1,5 +1,7 @@
 ArrayList<Platforms> platforms;
 ArrayList<Spikes> spikes;
+ArrayList<Strawberries> strawberries;
+
 Player player;
 float playerSize;
 Door door;
@@ -10,6 +12,7 @@ void setup() {
   size(1000, 800);
   platforms = new ArrayList<Platforms>();
   spikes = new ArrayList<Spikes>();
+  strawberries = new ArrayList<Strawberries>();  
   playerSize = 30;
   player = new Player(playerSize, 750-playerSize, color(random(255), random(255), random(255)));
   winscreen = new WinScreen();
@@ -58,6 +61,9 @@ void setup() {
   Spikes spike5 = new Spikes(width-400,400);
   spikes.add(spike5);  
   
+  Strawberries berry1 = new Strawberries(width/2+100,700);
+  strawberries.add(berry1);    
+  
   door = new Door(0, 50, 75, 100, color(143, 92, 84)); 
 } 
 
@@ -73,6 +79,11 @@ void draw() {
   for (Spikes s : spikes) {
     s.display();
   }
+  
+  //display strawberries
+  for (Strawberries b : strawberries) {
+    b.display();
+  }  
 
   // display and move player
   player.display();
