@@ -23,11 +23,15 @@ public class Player {
     win = false;
   }
 
-  public void display(boolean a) {
-    if (a) {
+  public void display() {
+    if (alive) {
       fill(rgb);
       noStroke();
       rect(x, y, playerSize, playerSize);
+    }
+    else {
+      x = 0;
+      y = height;
     }
   }
 

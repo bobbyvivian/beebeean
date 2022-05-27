@@ -3,7 +3,8 @@ ArrayList<Spikes> spikes;
 Player player;
 float playerSize;
 Door door;
-WinScreen screen;
+WinScreen winscreen;
+DeathScreen deathscreen;
 
 void setup() {
   size(1000, 800);
@@ -11,7 +12,8 @@ void setup() {
   spikes = new ArrayList<Spikes>();
   playerSize = 30;
   player = new Player(playerSize, 750-playerSize, color(random(255), random(255), random(255)));
-  screen = new WinScreen();
+  winscreen = new WinScreen();
+  deathscreen = new DeathScreen();
   
   //creating all the platforms in list
   Platforms plat1 = new Platforms(0, 750, 1000, 50, color(random(255), random(255), random(255))); // ground  
@@ -23,7 +25,7 @@ void setup() {
   Platforms plat3 = new Platforms(600, 600, 800, 50, color(random(255), random(255), random(255))); //second
   platforms.add(plat3);
   
-  Platforms plat4 = new Platforms(0, 450, 700, 50, color(random(255), random(255), random(255))); //third
+  Platforms plat4 = new Platforms(200, 450, 400, 50, color(random(255), random(255), random(255))); //third
   platforms.add(plat4);
   
   Platforms plat5 = new Platforms(850, 450, 200, 50, color(random(255), random(255), random(255))); //third
@@ -61,7 +63,7 @@ void draw() {
   }
 
   // display and move player
-  player.display(player.alive);
+  player.display();
   player.move();
   
   //display door
@@ -83,7 +85,10 @@ void draw() {
 
   // if player wins, will display victory screen
   if (player.win) {
-    screen.display();
+    winscreen.display();
+  }
+  if (!player.alive) {
+    deathscreen.display();
   }
 }  
 void keyPressed() {
