@@ -64,7 +64,7 @@ void setup() {
   Spikes spike6 = new Spikes(width-100,400);
   spikes.add(spike6);
   
-  Strawberries berry1 = new Strawberries(width/2+100,700);
+  Strawberries berry1 = new Strawberries(width/2+100,710);
   strawberries.add(berry1);    
   
   door = new Door(0, 50, 75, 100, color(143, 92, 84)); 

@@ -11,7 +11,7 @@ public class Strawberries {
   public void display() {
     fill(rgb);
     noStroke();
-    triangle(x,y,x+15,y+30,x+30,y);
-    ellipse(x+15,y,30,14);
+    triangle(x,y,x+20,y+30,x+40,y);
+    ellipse(x+20,y,40,14);
   } 
 }

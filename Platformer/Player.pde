@@ -163,4 +163,25 @@ public class Player {
     }
   }
   
+  public void getPoint() {
+      Strawberries s;
+      for (int i = 0; i<strawberries.size(); i++) {
+      s = strawberries.get(i);        
+      //coming from right      
+      if (y+playerSize<=s.y+30&&y+playerSize>=s.y&&x+playerSize>=s.x&&x+playerSize<=s.x+40) {
+        points++;       
+      }
+      if (y<=s.y+30&&y>=s.y&&x+playerSize>=s.x&&x+playerSize<=s.x+40) {
+        points++;       
+      }     
+      //coming from left
+      if (y+playerSize<=s.y+30&&y+playerSize>=s.y&&x>=s.x&&x<=s.x+40) {
+        points++;       
+      }
+      if (y<=s.y+30&&y>=s.y&&x>=s.x&&x<=s.x+40) {
+        points++;       
+      }      
+    }
+  }
+  
 }
