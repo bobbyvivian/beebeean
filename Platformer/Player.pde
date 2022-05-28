@@ -1,8 +1,8 @@
 public class Player {
-  float x, y, xSpeed, ySpeed, points, acceleration;
+  float x, y, xSpeed, ySpeed, acceleration;
   color rgb;
   boolean onGround, alive, left, right, up, jump, win;
-  int countdown;
+  int countdown, points;
 
   public Player(float xpos, float ypos, color col) {
     x = xpos;
@@ -40,6 +40,13 @@ public class Player {
     player.dead();    
     //check to see if player won
     player.win();
+    //check to see if player got a strawberry
+    int indB = player.getPoint();
+    if (indB!=-1) {
+      strawberries.get(indB).display = false;
+      strawberries.remove(indB);
+    }
+    
     
     if (countdown>30) {
       jump = true;
@@ -161,6 +168,32 @@ public class Player {
     if (y<=door.y+door.sizeY&&y>=door.y&&x<=door.x+door.sizeX&&x>=door.x) {
       win = true;
     }
+  }
+  
+  public int getPoint() {
+      Strawberries s;
+      for (int i = 0; i<strawberries.size(); i++) {
+      s = strawberries.get(i);        
+      //coming from right      
+      if (y+playerSize<=s.y+30&&y+playerSize>=s.y&&x+playerSize>=s.x&&x+playerSize<=s.x+40) {
+        points++;        
+        return i;
+      }
+      if (y<=s.y+30&&y>=s.y&&x+playerSize>=s.x&&x+playerSize<=s.x+40) {
+        points++;               
+        return i;
+      }     
+      //coming from left
+      if (y+playerSize<=s.y+30&&y+playerSize>=s.y&&x>=s.x&&x<=s.x+40) {
+        points++;               
+        return i;
+      }
+      if (y<=s.y+30&&y>=s.y&&x>=s.x&&x<=s.x+40) {
+        points++;               
+        return i;
+      }      
+    }
+    return -1;
   }
   
 }
