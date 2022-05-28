@@ -109,7 +109,11 @@ void draw() {
   
   //display door
   door.display();
+  
+  textSize(24);
+  text("POINTS: "+player.points, width-125, 30);     
 
+//DONT PUT ANYTHING BELOW THIS
   // if player wins, will display victory screen
   if (player.win) {
     winscreen.display();
