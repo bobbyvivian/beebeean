@@ -6,7 +6,7 @@ public class Strawberries {
   public Strawberries(float xpos, float ypos, boolean d) {
     x = xpos;
     y = ypos;
-    rgb = color(224, 103, 121);
+    rgb = color(239, 122, 133);
     display = d;
   }
   

@@ -7,7 +7,7 @@ public class Spikes {
     y = ypos;
     sizeX = 90;
     sizeY = 50;
-    rgb = color(205, 191, 222);
+    rgb = color(210, 182, 214);
   }
   
   public void display() {
