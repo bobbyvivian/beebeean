@@ -64,7 +64,7 @@ void setup() {
   Spikes spike6 = new Spikes(width-100,400);
   spikes.add(spike6);
   
-  Strawberries berry1 = new Strawberries(width/2+100,710);
+  Strawberries berry1 = new Strawberries(width/2+100,710,true);
   strawberries.add(berry1);    
   
   door = new Door(0, 50, 75, 100, color(143, 92, 84)); 
@@ -94,11 +94,6 @@ void draw() {
   
   //display door
   door.display();
-
-  //testing purposes, display status of onGround
-
-  text(player.x, 20, 20);
-  text(player.y, 20, 40);
 
   // if player wins, will display victory screen
   if (player.win) {
