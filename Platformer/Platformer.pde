@@ -67,6 +67,21 @@ void setup() {
   Strawberries berry1 = new Strawberries(width/2+100,710,true);
   strawberries.add(berry1);    
   
+  Strawberries berry2 = new Strawberries(width/2+500,260,true);
+  strawberries.add(berry2);  
+
+  Strawberries berry3 = new Strawberries(width/2+250,560,true);
+  strawberries.add(berry3);  
+  
+  Strawberries berry4 = new Strawberries(width-100,110,true);
+  strawberries.add(berry4);  
+  
+  Strawberries berry5 = new Strawberries(width/2-100,410,true);
+  strawberries.add(berry5);  
+  
+  Strawberries berry6 = new Strawberries(width/2,260,true);
+  strawberries.add(berry6);    
+  
   door = new Door(0, 50, 75, 100, color(180, 62, 143)); 
 } 
 
