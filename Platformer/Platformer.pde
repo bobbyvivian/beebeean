@@ -46,6 +46,9 @@ void setup() {
   Platforms plat9 = new Platforms(900, 150, 300, 50, color(255, 144, 179)); //fifth
   platforms.add(plat9); 
   
+  Platforms plat10 = new Platforms(0, -50, width, 50, color(255, 144, 179)); //fifth
+  platforms.add(plat10);   
+  
   Spikes spike1 = new Spikes(width/2-50,700);
   spikes.add(spike1);
 
