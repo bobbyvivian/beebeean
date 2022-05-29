@@ -34,3 +34,6 @@ Figured out a way to make sure player doesn't fall in the ground, only lands on 
 
 #### 5/27 Vivian
 Since we basically have a minimum viable product, I made strawberries! Strawberries class created, shape created, ArrayList created in the main Platformer class, able to display all the strawberries. Created method in Player class and added other details so that every time the player touches a strawberry in the ArrayList, the strawberry disappears and the player's points increases. Also displayed the player's points on the screen and fixed the problem where if the player stands in the same position as an already collected strawberry, the points won't keep counting. Also changed the colors of all the platforms, spikes, player, door so that everything looks better/more cohesive and the platform colors aren't randomly generated.
+
+#### 5/28 Xinni
+Working on making a start screen and implementing a pressable button or specific key that starts the game (displays the platforms, spikes, etc.). Struggling to tweak setup/draw to make it work. Thinking about implementing background music and making a restart button. 
