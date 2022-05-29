@@ -7,6 +7,7 @@ float playerSize;
 Door door;
 WinScreen winscreen;
 DeathScreen deathscreen;
+StartScreen startscreen;
 
 void setup() {
   size(1000, 800);
@@ -17,6 +18,7 @@ void setup() {
   player = new Player(playerSize, 750-playerSize, color(104, 19, 150));
   winscreen = new WinScreen();
   deathscreen = new DeathScreen();
+  startscreen = new StartScreen();
   
   //creating all the platforms in list
   Platforms plat1 = new Platforms(0, 750, 1000, 50, color(249, 146, 173)); // ground  
@@ -90,7 +92,7 @@ void setup() {
 
 void draw() {
   background(242, 225, 252);
-
+  
   //display platforms
   for (Platforms p : platforms) {
     p.display();
@@ -108,7 +110,9 @@ void draw() {
 
   // display and move player
   player.display();
-  player.move();
+  if (startscreen.clicked) {  
+    player.move();
+  }
   
   //display door
   door.display();
@@ -123,6 +127,9 @@ void draw() {
   }
   if (!player.alive) {
     deathscreen.display();
+  }
+  if (!startscreen.clicked) {
+    startscreen.display();
   }
 }  
 void keyPressed() {
@@ -150,3 +157,7 @@ void keyReleased() {
     player.up = false;
   }
 }
+
+  public void mouseClicked() {
+    startscreen.clicked = true;
+  }
