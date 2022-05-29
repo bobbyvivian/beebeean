@@ -26,6 +26,9 @@ Made Spikes constructor and made an ArrayList of them, worked more on movement a
 #### 5/25 Vivian
 Bettered jumping by adding countdown. The jump also properly decelerates now because I tried a much simpler way to implement jumping. Added acceleration as a field, no longer using gravity. Jump properly working movement-wise. Although player goes down after hitting ceiling, still need to make it so that it doesn't go INTO the ceiling.
 
+#### 5/25 Xinni
+Finished making platforms and improved spacing between them. Created Door class. 
+
 #### 5/26 Vivian
 Figured out a way to make sure player doesn't fall in the ground, only lands on the ground now. Made the actual spike shapes and added some in the ArrayList and display(). Also made it so that the player will die upon touching a spike (player no longer visible). Added a victory screen and death screen so that dying and winning will display these pretty images and text. ALSO MOST IMPORTANT: Finally got the hitting upper bound stuff worked out so that the player cannot go into ceiling at all so that means ALL the movement stuff is working!!!!!!!!!
 
