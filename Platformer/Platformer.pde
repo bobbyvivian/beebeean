@@ -16,6 +16,7 @@ void setup() {
   strawberries = new ArrayList<Strawberries>();  
   playerSize = 30;
   player = new Player(playerSize, 750-playerSize, color(104, 19, 150));
+  startscreen = new StartScreen();
   winscreen = new WinScreen();
   deathscreen = new DeathScreen();
   startscreen = new StartScreen();
@@ -87,7 +88,7 @@ void setup() {
   Strawberries berry6 = new Strawberries(width/2,260,true);
   strawberries.add(berry6);    
   
-  door = new Door(0, 50, 75, 100, color(180, 62, 143)); 
+  door = new Door(0, 50, 75, 100, color(180, 62, 143)); startscreen.display();
 } 
 
 void draw() {
@@ -158,6 +159,6 @@ void keyReleased() {
   }
 }
 
-  public void mouseClicked() {
-    startscreen.clicked = true;
-  }
+public void mouseClicked() {
+  startscreen.clicked = true;
+}
