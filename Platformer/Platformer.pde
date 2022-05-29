@@ -7,6 +7,7 @@ float playerSize;
 Door door;
 WinScreen winscreen;
 DeathScreen deathscreen;
+StartScreen startscreen;
 
 void setup() {
   size(1000, 800);
@@ -15,6 +16,7 @@ void setup() {
   strawberries = new ArrayList<Strawberries>();  
   playerSize = 30;
   player = new Player(playerSize, 750-playerSize, color(104, 19, 150));
+  startscreen = new StartScreen();
   winscreen = new WinScreen();
   deathscreen = new DeathScreen();
   
@@ -86,6 +88,8 @@ void setup() {
   strawberries.add(berry6);    
   
   door = new Door(0, 50, 75, 100, color(180, 62, 143)); 
+  
+  startscreen.display();
 } 
 
 void draw() {
