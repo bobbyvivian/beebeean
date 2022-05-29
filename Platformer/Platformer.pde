@@ -126,7 +126,7 @@ void draw() {
   if (!player.alive) {
     deathscreen.display();
   }
-  if (!startscreen.buttonClicked) {
+  if (!startscreen.clicked) {
     startscreen.display();
   }
 }  
@@ -155,3 +155,7 @@ void keyReleased() {
     player.up = false;
   }
 }
+
+  public void mouseClicked() {
+    startscreen.clicked = true;
+  }
