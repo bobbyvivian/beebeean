@@ -110,7 +110,9 @@ void draw() {
 
   // display and move player
   player.display();
-  player.move();
+  if (startscreen.clicked) {  
+    player.move();
+  }
   
   //display door
   door.display();
