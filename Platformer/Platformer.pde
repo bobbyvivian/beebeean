@@ -25,7 +25,7 @@ void setup() {
   startscreen = new StartScreen();
   
   audio = new SoundFile(this, "bbkk.wav");
-  audio.play();
+  audio.loop();
   
   //creating all the platforms in list
   Platforms plat1 = new Platforms(0, 750, 1000, 50, color(249, 146, 173)); // ground  
