@@ -40,3 +40,6 @@ Working on making a start screen and implementing a pressable button or specific
 
 #### 5/28 Vivian
 Made the the leaves on the strawberries. Both of us were working on implementing a start screen oops. Made the StartScreen class, display method, resized the image, displaying text that says "click to start game!", clicking the screen will start the game. Fixed problem where player can move behind the start screen so now it can only move after the screen is clicked. StartScreen done.
+
+#### 5/30 Xinni
+Implemented background music, requires importing Sound library. Used a .mp3 file for music at first but there was a long delay for the game to show up/music to start playing. Fixed this by using a .wav file instead.   
