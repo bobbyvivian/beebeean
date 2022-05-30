@@ -24,7 +24,7 @@ void setup() {
   deathscreen = new DeathScreen();
   startscreen = new StartScreen();
   
-  audio = new SoundFile(this, "bbkk.mp3");
+  audio = new SoundFile(this, "bbkk.wav");
   audio.play();
   
   //creating all the platforms in list
