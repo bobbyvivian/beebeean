@@ -9,6 +9,9 @@ WinScreen winscreen;
 DeathScreen deathscreen;
 StartScreen startscreen;
 
+import processing.sound.*;
+SoundFile audio;
+
 void setup() {
   size(1000, 800);
   platforms = new ArrayList<Platforms>();
@@ -20,6 +23,9 @@ void setup() {
   winscreen = new WinScreen();
   deathscreen = new DeathScreen();
   startscreen = new StartScreen();
+  
+  audio = new SoundFile(this, "bbkk.mp3");
+  audio.play();
   
   //creating all the platforms in list
   Platforms plat1 = new Platforms(0, 750, 1000, 50, color(249, 146, 173)); // ground  
