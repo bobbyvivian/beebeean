@@ -3,11 +3,11 @@ public class Strawberries {
   color rgb;
   boolean display;
   
-  public Strawberries(float xpos, float ypos, boolean d) {
+  public Strawberries(float xpos, float ypos) {
     x = xpos;
     y = ypos;
     rgb = color(239, 122, 133);
-    display = d;
+    display = true;
   }
   
   public void display() {
