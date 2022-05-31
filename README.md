@@ -1,6 +1,9 @@
 # beebeean
 Final Project APCS
 
+## COMPILE/RUN INSTRUCTIONS
+Import the sound library in processing!!
+
 Doc Link:
 https://docs.google.com/document/d/18D-w8zidQ-b0LETf9JyQ6mye_0SceCx79GqPuXIRUf0/edit?usp=sharing
 
@@ -43,3 +46,6 @@ Made the the leaves on the strawberries. Both of us were working on implementing
 
 #### 5/30 Xinni
 Implemented background music, requires importing Sound library. Used a .mp3 file for music at first but there was a long delay for the game to show up/music to start playing. Fixed this by using a .wav file instead.   
+
+#### 5/30 Vivian
+Compile/run instructions (import sound library). Made it so that the player can retry after dying by making a retry method (resets everything) in the Player class and displaying "click to retry" on the death screen. Also fixed the problem where the strawberries already collected aren't displayed after pressing retry. Made proper use of the display field in the Strawberry class so that the strawberries aren't removed from the ArrayList after being collected. Retry done. Will also add this option for when player wins too. Made demo branch.
