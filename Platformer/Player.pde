@@ -13,7 +13,7 @@ public class Player {
     points = 0;
     rgb = col;
     onGround = true;
-    alive = true;
+    alive = false;
     left = false;
     right = false;
     up = false;
@@ -204,6 +204,7 @@ public class Player {
     acceleration = 0;
     points = 0;
     alive = true;
+
     jump = false;
     win = false;    
   }
