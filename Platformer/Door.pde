@@ -14,7 +14,7 @@ public class Door {
     fill(rgb); 
     noStroke();
     rect(x,y,sizeX,sizeY);
-    fill(77, 73, 82);
+    fill(93, 32, 97);
     circle(x+sizeX/4,y+sizeY/2,sizeX/4);
   }
 }

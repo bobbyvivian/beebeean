@@ -1,8 +1,8 @@
 public class Player {
-  float x, y, xSpeed, ySpeed, points, acceleration;
+  float x, y, xSpeed, ySpeed, acceleration;
   color rgb;
   boolean onGround, alive, left, right, up, jump, win;
-  int countdown;
+  int countdown, points, level;
 
   public Player(float xpos, float ypos, color col) {
     x = xpos;
@@ -13,13 +13,14 @@ public class Player {
     points = 0;
     rgb = col;
     onGround = true;
-    alive = true;
+    alive = false;
     left = false;
     right = false;
     up = false;
     countdown = 0;
     jump = false;
     win = false;
+    level = 1;
   }
 
   public void display() {
@@ -40,6 +41,12 @@ public class Player {
     player.dead();    
     //check to see if player won
     player.win();
+    //check to see if player got a strawberry
+    int indB = player.getPoint();
+    if (indB!=-1) {
+      strawberries.get(indB).display = false;
+    }
+    
     
     if (countdown>30) {
       jump = true;
@@ -160,6 +167,50 @@ public class Player {
     //coming from right
     if (y<=door.y+door.sizeY&&y>=door.y&&x<=door.x+door.sizeX&&x>=door.x) {
       win = true;
+    }
+  }
+  
+  public int getPoint() {
+      Strawberries s;
+      for (int i = 0; i<strawberries.size(); i++) {
+        s = strawberries.get(i);       
+        if (s.display) {
+          //coming from right      
+          if (y+playerSize<=s.y+30&&y+playerSize>=s.y&&x+playerSize>=s.x&&x+playerSize<=s.x+40) {
+            points++;        
+            return i;
+          }
+          if (y<=s.y+30&&y>=s.y&&x+playerSize>=s.x&&x+playerSize<=s.x+40) {
+            points++;               
+            return i;
+          }     
+          //coming from left
+          if (y+playerSize<=s.y+30&&y+playerSize>=s.y&&x>=s.x&&x<=s.x+40) {
+            points++;               
+            return i;
+          }
+          if (y<=s.y+30&&y>=s.y&&x>=s.x&&x<=s.x+40) {
+            points++;               
+            return i;
+          }      
+        }
+    }
+    return -1;
+  }
+  
+  public void retry(float xpos, float ypos) {
+    x = xpos;
+    y = ypos;
+    xSpeed = 2;
+    ySpeed = 0;
+    acceleration = 0;
+    points = 0;
+    alive = true;
+
+    jump = false;
+    win = false; 
+    for (int i = 0; i<strawberries.size(); i++) {
+      strawberries.get(i).display = true;
     }
   }
   
