@@ -1,7 +1,7 @@
 public class Player {
   float x, y, xSpeed, ySpeed, acceleration;
   color rgb;
-  boolean onGround, alive, left, right, up, jump, win, retry;
+  boolean onGround, alive, left, right, up, jump, win;
   int countdown, points;
 
   public Player(float xpos, float ypos, color col) {
@@ -20,7 +20,6 @@ public class Player {
     countdown = 0;
     jump = false;
     win = false;
-    retry = false;
   }
 
   public void display() {
@@ -195,6 +194,18 @@ public class Player {
       }      
     }
     return -1;
+  }
+  
+  public void retry(float xpos, float ypos) {
+    x = xpos;
+    y = ypos;
+    xSpeed = 2;
+    ySpeed = 0;
+    acceleration = 0;
+    points = 0;
+    alive = true;
+    jump = false;
+    win = false;    
   }
   
 }
