@@ -2,7 +2,7 @@ public class Player {
   float x, y, xSpeed, ySpeed, acceleration;
   color rgb;
   boolean onGround, alive, left, right, up, jump, win;
-  int countdown, points;
+  int countdown, points, level;
 
   public Player(float xpos, float ypos, color col) {
     x = xpos;
@@ -20,6 +20,7 @@ public class Player {
     countdown = 0;
     jump = false;
     win = false;
+    level = 1;
   }
 
   public void display() {

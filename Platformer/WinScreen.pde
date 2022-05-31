@@ -7,6 +7,6 @@ public class WinScreen {
     text("VICTORY", 215, height/2);     
     
     textSize(40);
-    text("click to retry!", width/2-125, 400);         
+    text("click to retry!", width/2-125, 500);         
   }
 }
