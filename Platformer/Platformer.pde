@@ -172,4 +172,7 @@ public void mouseClicked() {
   if (!player.alive) {
     player.retry(playerSize, 750-playerSize);
   }
+  if (player.win) {
+    player.retry(playerSize, 750-playerSize);    
+  }
 }
