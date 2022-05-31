@@ -166,5 +166,10 @@ void keyReleased() {
 }
 
 public void mouseClicked() {
-  startscreen.clicked = true;
+  if (!startscreen.clicked) {
+    startscreen.clicked = true;
+  }
+  if (!player.alive) {
+    player.retry();
+  }
 }
