@@ -41,18 +41,19 @@ void draw() {
   background(242, 225, 252);
   
   int l = player.level;
-      switch(l) {
-        case 1:
+        if (l==1) {
           platforms = level1.platforms1;
           spikes = level1.spikes1;
           strawberries = level1.strawberries1;
           door = level1.door1;
-        case 2:
+        }
+        if (l==2) {
           platforms = level2.platforms2;
           spikes = level2.spikes2;
           strawberries = level2.strawberries2;
-          door = level2.door2;        
-        case 3:
+          door = level2.door2;     
+        }
+        if (l==3) {
           platforms = level3.platforms3;
           spikes = level3.spikes3;
           strawberries = level3.strawberries3;
@@ -84,7 +85,9 @@ void draw() {
   door.display();
   
   textSize(24);
-  text("POINTS: "+player.points, width-125, 30);     
+  text("POINTS: "+player.points, width-125, 30);
+  text("LEVEL: "+player.level, width-125, 50);     
+  
 
 //DONT PUT ANYTHING BELOW THIS
   // if player wins, will display victory screen
@@ -129,17 +132,18 @@ public void mouseClicked() {
     int l = startscreen.whichLevel(mouseX, mouseY);
     if (l!=-1) {
       startscreen.clicked = true;
-      switch(l) {
-        case 1:
+        if (l==1) {
           player.level = 1;
-        case 2:
+        }
+        if (l==2) {
           player.level = 2;
-        case 3:
+        }
+        if (l==3) {
           player.level = 3;
-      }
+        }
     }
-    
   }
+    
   if (!player.alive) {
     player.retry(playerSize, 750-playerSize);
   }
