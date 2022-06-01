@@ -2,7 +2,7 @@
 Final Project APCS
 
 ## COMPILE/RUN INSTRUCTIONS
-Import the sound library in processing!!
+Import the sound library in processing. Use arrow keys to move.
 
 Doc Link:
 https://docs.google.com/document/d/18D-w8zidQ-b0LETf9JyQ6mye_0SceCx79GqPuXIRUf0/edit?usp=sharing
@@ -52,3 +52,6 @@ Compile/run instructions (import sound library). Made it so that the player can 
 
 #### 5/31 Vivian
 Made it so that you can retry after winning too (click on victory screen). Made it so that we now have 3 levels. Made different tabs for the levels so we can store all the contents, made the buttons and text in startscreen and also a method in startscreen to determine which button the player clicked on. Depending on the button, player's level field is changed accordingly and the right platforms/spikes/berries is displayed. The level is also displayed on the screen. All the levels are the same right now, will change, most importantly the logic is done.
+
+#### 5/31 Xinni
+Working on making the different difficulty levels by rearranging platforms, spikes, and strawberries. Currently working on making level 1.
