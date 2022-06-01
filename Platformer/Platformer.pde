@@ -32,7 +32,7 @@ void setup() {
 
 
   audio = new SoundFile(this, "bbkk.wav");
-  audio.loop();
+  //audio.loop();
 } 
 
 void draw() {
