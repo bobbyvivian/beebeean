@@ -167,7 +167,19 @@ void keyReleased() {
 
 public void mouseClicked() {
   if (!startscreen.clicked) {
-    startscreen.clicked = true;
+    int l = startscreen.whichLevel(mouseX, mouseY);
+    if (l!=-1) {
+      startscreen.clicked = true;
+      switch(l) {
+        case 1:
+          player.level = 1;
+        case 2:
+          player.level = 2;
+        case 3:
+          player.level = 3;
+      }
+    }
+    
   }
   if (!player.alive) {
     player.retry(playerSize, 750-playerSize);

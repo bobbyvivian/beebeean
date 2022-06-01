@@ -43,10 +43,14 @@ public class StartScreen {
     if (xPos>=100&&xPos<=250&&yPos>=300&&yPos<=400) {
       return 1;
     }
+    //level 2
     if (xPos>=width/2-75&&xPos<=width/2+75&&yPos>=300&&yPos<=400) {
       return 2;
-    }  
+    } 
+    //level 3
     if (xPos>=width-250&&xPos<=width-100&&yPos>=300&&yPos<=400) {
       return 3;
     }   
+    return -1;
+  }
 }
