@@ -37,4 +37,16 @@ public class StartScreen {
     textSize(40);
     text("level 3", width-250+15, 350);     
   } 
+  
+  public int whichLevel(float xPos, float yPos) {
+    //level 1
+    if (xPos>=100&&xPos<=250&&yPos>=300&&yPos<=400) {
+      return 1;
+    }
+    if (xPos>=width/2-75&&xPos<=width/2+75&&yPos>=300&&yPos<=400) {
+      return 2;
+    }  
+    if (xPos>=width-250&&xPos<=width-100&&yPos>=300&&yPos<=400) {
+      return 3;
+    }   
 }
