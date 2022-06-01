@@ -49,3 +49,6 @@ Implemented background music, requires importing Sound library. Used a .mp3 file
 
 #### 5/30 Vivian
 Compile/run instructions (import sound library). Made it so that the player can retry after dying by making a retry method (resets everything) in the Player class and displaying "click to retry" on the death screen. Also fixed the problem where the strawberries already collected aren't displayed after pressing retry. Made proper use of the display field in the Strawberry class so that the strawberries aren't removed from the ArrayList after being collected. Retry done. Will also add this option for when player wins too. Made demo branch.
+
+#### 5/31 Vivian
+Made it so that you can retry after winning too (click on victory screen). Made it so that we now have 3 levels. Made different tabs for the levels so we can store all the contents, made the buttons and text in startscreen and also a method in startscreen to determine which button the player clicked on. Depending on the button, player's level field is changed accordingly and the right platforms/spikes/berries is displayed. The level is also displayed on the screen. All the levels are the same right now, will change, most importantly the logic is done.
