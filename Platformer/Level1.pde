@@ -36,39 +36,39 @@ public class Level1 {
     platforms1.add(plat10);   
     
     Spikes spike1 = new Spikes(width/2-50,700);
-    spikes.add(spike1);
+    spikes1.add(spike1);
   
     Spikes spike2 = new Spikes(10,550);
-    spikes.add(spike2);
+    spikes1.add(spike2);
     
     Spikes spike3 = new Spikes(width-180,550);
-    spikes.add(spike3);
+    spikes1.add(spike3);
     
     Spikes spike4 = new Spikes(width/2-175,250);
-    spikes.add(spike4);  
+    spikes1.add(spike4);  
     
     Spikes spike5 = new Spikes(width-400,400);
-    spikes.add(spike5);  
+    spikes1.add(spike5);  
     
     Spikes spike6 = new Spikes(width-100,400);
-    spikes.add(spike6);
+    spikes1.add(spike6);
     
     Strawberries berry1 = new Strawberries(width/2+100,710);
-    strawberries.add(berry1);    
+    strawberries1.add(berry1);    
     
     Strawberries berry2 = new Strawberries(width/2+500,260);
-    strawberries.add(berry2);  
+    strawberries1.add(berry2);  
   
     Strawberries berry3 = new Strawberries(width/2+250,560);
-    strawberries.add(berry3);  
+    strawberries1.add(berry3);  
     
     Strawberries berry4 = new Strawberries(width-100,110);
-    strawberries.add(berry4);  
+    strawberries1.add(berry4);  
     
     Strawberries berry5 = new Strawberries(width/2-100,410);
-    strawberries.add(berry5);  
+    strawberries1.add(berry5);  
     
     Strawberries berry6 = new Strawberries(width/2,260);
-    strawberries.add(berry6);    
+    strawberries1.add(berry6);    
   }
 }  
