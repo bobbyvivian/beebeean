@@ -23,10 +23,10 @@ public class Level1 {
     Platforms plat6 = new Platforms(550, 300, 900, 50, color(212, 176, 249)); // 4
     platforms1.add(plat6); 
 
-    Platforms plat7 = new Platforms(0, 300, 350, 50, color(197, 128, 237));  // 4
+    Platforms plat7 = new Platforms(0, 300, 350, 50, color(220, 170, 241));  // 4
     platforms1.add(plat7);
 
-    Platforms plat8 = new Platforms(0, 150, 700, 50, color(220, 170, 241)); // door platform
+    Platforms plat8 = new Platforms(0, 150, 700, 50, color(197, 128, 237)); // door platform
     platforms1.add(plat8);
 
     Platforms plat9 = new Platforms(850, 150, 250, 50, color(207, 185, 247)); // 5
