@@ -20,20 +20,23 @@ public class Level1 {
     Platforms plat5 = new Platforms(850, 450, 250, 50, color(207, 185, 247)); // 3
     platforms1.add(plat5);
     
-    Platforms plat6 = new Platforms(650, 300, 900, 50, color(212, 176, 249)); // 4
+    Platforms plat6 = new Platforms(550, 300, 900, 50, color(212, 176, 249)); // 4
     platforms1.add(plat6); 
     
-    Platforms plat7 = new Platforms(0, 150, 280, 50, color(197, 128, 237)); 
+    Platforms plat7 = new Platforms(0, 300, 350, 50, color(197, 128, 237)); 
     platforms1.add(plat7);
     
-    Platforms plat8 = new Platforms(450, 150, 300, 50, color(220, 170, 241)); 
+    Platforms plat8 = new Platforms(0, 150, 280, 50, color(197, 128, 237)); 
     platforms1.add(plat8);
-      
-    Platforms plat9 = new Platforms(900, 150, 300, 50, color(255, 144, 179)); 
-    platforms1.add(plat9); 
     
-    Platforms plat10 = new Platforms(0, -50, width, 50, color(255, 144, 179)); 
-    platforms1.add(plat10);   
+    //Platforms plat8 = new Platforms(450, 150, 300, 50, color(220, 170, 241)); 
+    //platforms1.add(plat8);
+      
+    //Platforms plat9 = new Platforms(900, 150, 300, 50, color(255, 144, 179)); 
+    //platforms1.add(plat9); 
+    
+    //Platforms plat10 = new Platforms(0, -50, width, 50, color(255, 144, 179)); 
+    //platforms1.add(plat10);   
     
     //Spikes spike1 = new Spikes(100,700);
     //spikes1.add(spike1);
@@ -65,7 +68,7 @@ public class Level1 {
     //Strawberries berry3 = new Strawberries(width/2+250,560);
     //strawberries1.add(berry3);  
     
-    Strawberries berry4 = new Strawberries(width-100,410);
+    Strawberries berry4 = new Strawberries(width-400,410);
     strawberries1.add(berry4);  
     
     Strawberries berry5 = new Strawberries(width/2-300,410);
