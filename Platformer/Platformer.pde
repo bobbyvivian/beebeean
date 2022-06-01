@@ -9,6 +9,8 @@ WinScreen winscreen;
 DeathScreen deathscreen;
 StartScreen startscreen;
 Level1 level1;
+Level2 level2;
+Level3 level3;
 
 import processing.sound.*;
 SoundFile audio;
@@ -25,6 +27,9 @@ void setup() {
   deathscreen = new DeathScreen();
   startscreen = new StartScreen();
   level1 = new Level1();
+  level2 = new Level2();
+  level3 = new Level3();  
+  
   
   audio = new SoundFile(this, "bbkk.wav");
   audio.loop();
@@ -43,10 +48,16 @@ void draw() {
           strawberries = level1.strawberries1;
           door = level1.door1;
         case 2:
-          //player.level = 2;
+          platforms = level2.platforms2;
+          spikes = level2.spikes2;
+          strawberries = level2.strawberries2;
+          door = level2.door2;        
         case 3:
-          //player.level = 3;
-      }
+          platforms = level3.platforms3;
+          spikes = level3.spikes3;
+          strawberries = level3.strawberries3;
+          door = level3.door3; 
+        }
       
   //display platforms
   for (Platforms p : platforms) {
