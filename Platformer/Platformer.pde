@@ -11,6 +11,7 @@ StartScreen startscreen;
 Level1 level1;
 Level2 level2;
 Level3 level3;
+BackButton back;
 
 import processing.sound.*;
 SoundFile audio;
@@ -29,6 +30,7 @@ void setup() {
   level1 = new Level1();
   level2 = new Level2();
   level3 = new Level3();  
+  back = new BackButton();
 
 
   audio = new SoundFile(this, "bbkk.wav");
@@ -95,6 +97,9 @@ void draw() {
   if (!player.alive) {
     deathscreen.display();
   }
+  
+  back.display();
+  
   if (!startscreen.clicked) {
     startscreen.display();
   }
@@ -147,5 +152,8 @@ public void mouseClicked() {
   }
   if (player.win) {
     player.retry(playerSize, 750-playerSize);
+  }
+  if (back.clicked(mouseX,mouseY)) {
+    startscreen.clicked = false;
   }
 }

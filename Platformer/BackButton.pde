@@ -17,9 +17,12 @@ public class BackButton {
     //triangle();
     
   }
-  public void clicked(float xPos, float yPos) {
+  public boolean clicked(float xPos, float yPos) {
     if (xPos>=x&&xPos<=x+size&&yPos>=y&&yPos<=y+size) {
       clicked = true;
+      return true;
     }
+    clicked = false;
+    return false;
   }
 }
