@@ -10,9 +10,11 @@ public class MovePlat extends Platforms{
   }
   public void move() {
     if (vertical) {
+      //more
       y+=ySpeed;
     }
     else {
+      //more
       x+=xSpeed;
     }
   }
