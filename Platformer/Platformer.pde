@@ -34,7 +34,7 @@ void setup() {
 
 
   audio = new SoundFile(this, "bbkk.wav");
-  //audio.loop();
+  audio.loop();
 } 
 
 void draw() {
@@ -86,7 +86,7 @@ void draw() {
 
   textSize(24);
   text("POINTS: "+player.points, width-125, 30);
-  text("LEVEL: "+player.level, width-125, 50);     
+  text("LEVEL: "+player.level, width-125, 55);     
 
 
   //DONT PUT ANYTHING BELOW THIS
@@ -97,12 +97,13 @@ void draw() {
   if (!player.alive) {
     deathscreen.display();
   }
-  
-  back.display();
-  
+    
   if (!startscreen.clicked) {
     startscreen.display();
   }
+  else {
+    back.display();
+  }    
 }  
 void keyPressed() {
   switch (keyCode) {
