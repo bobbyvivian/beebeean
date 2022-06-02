@@ -11,6 +11,7 @@ StartScreen startscreen;
 Level1 level1;
 Level2 level2;
 Level3 level3;
+Level4 level4;
 BackButton back;
 
 import processing.sound.*;
@@ -29,12 +30,13 @@ void setup() {
   startscreen = new StartScreen();
   level1 = new Level1();
   level2 = new Level2();
-  level3 = new Level3();  
+  level3 = new Level3();
+  level4 = new Level4();
   back = new BackButton();
 
 
   audio = new SoundFile(this, "bbkk.wav");
-  //audio.loop();
+  audio.loop();
 } 
 
 void draw() {
@@ -59,6 +61,12 @@ void draw() {
     strawberries = level3.strawberries3;
     door = level3.door3;
   }
+  if (l==4) {
+    platforms = level4.platforms4;
+    spikes = level4.spikes4;
+    strawberries = level4.strawberries4;
+    door = level4.door4;
+  }  
 
   //display platforms
   for (Platforms p : platforms) {
@@ -86,7 +94,7 @@ void draw() {
 
   textSize(24);
   text("POINTS: "+player.points, width-125, 30);
-  text("LEVEL: "+player.level, width-125, 50);     
+  text("LEVEL: "+player.level, width-125, 55);     
 
 
   //DONT PUT ANYTHING BELOW THIS
@@ -97,12 +105,13 @@ void draw() {
   if (!player.alive) {
     deathscreen.display();
   }
-  
-  back.display();
-  
+    
   if (!startscreen.clicked) {
     startscreen.display();
   }
+  else {
+    back.display();
+  }    
 }  
 void keyPressed() {
   switch (keyCode) {
@@ -144,6 +153,9 @@ public void mouseClicked() {
       if (l==3) {
         player.level = 3;
       }
+      if (l==4) {
+        player.level = 4;
+      }      
     }
   }
 

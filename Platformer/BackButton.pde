@@ -13,8 +13,8 @@ public class BackButton {
     square(x,y,size);
     
     fill(113, 105, 140);
-    rect(x+size/4,y+size/3,size/2,size/4);
-    //triangle();
+    rect(x+size/3,y+size/2-size/8,size/2,size/4);
+    triangle(x+size/2,y+size/5,x+size/6,y+size/2,x+size/2,y+size*4/5);
     
   }
   public boolean clicked(float xPos, float yPos) {

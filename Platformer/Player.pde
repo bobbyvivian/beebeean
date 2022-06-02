@@ -168,6 +168,18 @@ public class Player {
     if (y<=door.y+door.sizeY&&y>=door.y&&x<=door.x+door.sizeX&&x>=door.x) {
       win = true;
     }
+    //coming from left
+    if (y<=door.y+door.sizeY&&y>=door.y&&x+playerSize>=door.x&&x+playerSize<=door.x+door.sizeX) {
+      win = true;
+    } 
+    //coming from right and up
+    if (y+playerSize<=door.y+door.sizeY&&y+playerSize>=door.y&&x<=door.x+door.sizeX&&x>=door.x) {
+      win = true;
+    }
+    //coming from left and up
+    if (y+playerSize<=door.y+door.sizeY&&y+playerSize>=door.y&&x+playerSize>=door.x&&x+playerSize<=door.x+door.sizeX) {
+      win = true;
+    }        
   }
   
   public int getPoint() {
