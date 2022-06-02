@@ -35,7 +35,14 @@ public class StartScreen {
     rect(width-250,300,150,100);
     fill(128, 50, 63);    
     textSize(40);
-    text("level 3", width-250+15, 350);     
+    text("level 3", width-250+15, 350);  
+    
+    //level 4 button
+    fill(250, 185, 185);
+    rect(100,500,150,100);
+    fill(128, 50, 63);    
+    textSize(40);
+    text("level 4", 115, 550);      
   } 
   
   public int whichLevel(float xPos, float yPos) {
@@ -50,7 +57,11 @@ public class StartScreen {
     //level 3
     if (xPos>=width-250&&xPos<=width-100&&yPos>=300&&yPos<=400) {
       return 3;
-    }   
+    }  
+    //level 4
+    if (xPos>=width-250&&xPos<=width-100&&yPos>=500&&yPos<=600) {
+      return 4;
+    }       
     return -1;
   }
 }
