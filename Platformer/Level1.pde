@@ -79,5 +79,8 @@ public class Level1 {
 
     Strawberries berry7 = new Strawberries(400,110);
     strawberries1.add(berry7);
+    
+    Strawberries berry8 = new Strawberries(775, 110);
+    strawberries1.add(berry8);
   }
 }  
