@@ -11,7 +11,10 @@ public class MovePlat extends Platforms{
     ySpeed = 2;
     vertical = v;
     displace = d;
-
+  }
+  public void display() {
+    super.display();
+    move();
   }
   public void move() {
     if (vertical) {
