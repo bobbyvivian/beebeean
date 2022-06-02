@@ -2,7 +2,7 @@ public class Level2 {
   ArrayList<Platforms> platforms2 = new ArrayList<Platforms>();
   ArrayList<Spikes> spikes2 = new ArrayList<Spikes>();
   ArrayList<Strawberries> strawberries2 = new ArrayList<Strawberries>();
-  Door door2 = new Door(0, 50, 75, 100, color(180, 62, 143));
+  Door door2 = new Door(0, 50, 75, 100);
   
   public Level2() {
     Platforms plat1 = new Platforms(0, 750, 1000, 50, color(249, 146, 173)); // ground  
