@@ -59,7 +59,7 @@ public class StartScreen {
       return 3;
     }  
     //level 4
-    if (xPos>=width-250&&xPos<=width-100&&yPos>=500&&yPos<=600) {
+    if (xPos>=100&&xPos<=250&&yPos>=500&&yPos<=600) {
       return 4;
     }       
     return -1;
