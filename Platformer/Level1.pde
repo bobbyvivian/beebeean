@@ -53,7 +53,7 @@ public class Level1 {
     Spikes spike7 = new Spikes(width-200, 250);
     spikes1.add(spike7);
     
-    Spikes spike8 = new Spikes(width-175, 100);
+    Spikes spike8 = new Spikes(width-150, 100);
     spikes1.add(spike8);
     
     Strawberries berry1 = new Strawberries(900, 710);
@@ -74,10 +74,10 @@ public class Level1 {
     Strawberries berry5 = new Strawberries(width/2-300, 410);
     strawberries1.add(berry5);  
 
-    Strawberries berry6 = new Strawberries(940, 110);
+    Strawberries berry6 = new Strawberries(650, 260);
     strawberries1.add(berry6);  
 
-    Strawberries berry7 = new Strawberries(width/2,110);
+    Strawberries berry7 = new Strawberries(400,110);
     strawberries1.add(berry7);
   }
 }  
