@@ -58,3 +58,6 @@ Working on making the different difficulty levels by rearranging platforms, spik
 
 #### 6/1 Vivian
 Made a back button for all the screens so that you can go back to the start screen whenever you want and can choose the different levels whenever. Did this by making a BackButton class with display(), clicked() methods. Button only displayed on all other screens except start screen. Fully functional, made it look like an arrow.
+
+#### 6/1 Xinni
+Still working on remaking levels in order of increasing difficulty. Level 1 is almost finished.
