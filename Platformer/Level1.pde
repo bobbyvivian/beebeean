@@ -26,10 +26,10 @@ public class Level1 {
     Platforms plat7 = new Platforms(0, 300, 350, 50, color(220, 170, 241));  // 4
     platforms1.add(plat7);
 
-    Platforms plat8 = new Platforms(0, 150, 700, 50, color(197, 128, 237)); // door platform
+    Platforms plat8 = new Platforms(0, 150, 600, 50, color(197, 128, 237)); // door platform
     platforms1.add(plat8);
 
-    Platforms plat9 = new Platforms(850, 150, 250, 50, color(207, 185, 247)); // 5
+    Platforms plat9 = new Platforms(750, 150, 250, 50, color(207, 185, 247)); // 5
     platforms1.add(plat9);
 
     Platforms plat10 = new Platforms(0, -50, width, 50, color(255, 144, 179)); //ceiling
@@ -53,6 +53,9 @@ public class Level1 {
     Spikes spike7 = new Spikes(width-200, 250);
     spikes1.add(spike7);
 
+    Spikes spike8 = new Spikes(width-150, 100);
+    spikes1.add(spike8);
+
     Strawberries berry1 = new Strawberries(900, 710);
     strawberries1.add(berry1);    
 
@@ -71,10 +74,13 @@ public class Level1 {
     Strawberries berry5 = new Strawberries(width/2-300, 410);
     strawberries1.add(berry5);  
 
-    Strawberries berry6 = new Strawberries(950, 100);
+    Strawberries berry6 = new Strawberries(650, 260);
     strawberries1.add(berry6);  
 
-    //Strawberries berry6 = new Strawberries(width/2,260);
-    //strawberries1.add(berry6);
+    Strawberries berry7 = new Strawberries(400, 110);
+    strawberries1.add(berry7);
+
+    Strawberries berry8 = new Strawberries(775, 110);
+    strawberries1.add(berry8);
   }
 }  
