@@ -8,7 +8,7 @@ public class MovePlat extends Platforms{
     oX = xPos;
     oY = yPos;
     xSpeed = 2;
-    ySpeed = 2;
+    ySpeed = 1;
     vertical = v;
     displace = d;
   }
