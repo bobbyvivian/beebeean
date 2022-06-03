@@ -70,7 +70,9 @@ public class Player {
       Platforms p = platforms.get(indMP);              
       if (p.move) {
         p = (MovePlat)p;
-        x+=p.xSpeed;
+        if (x+p.xSpeed>=0&&x+p.xSpeed<=width) {
+          x+=p.xSpeed;
+        }
       }
     }
     
