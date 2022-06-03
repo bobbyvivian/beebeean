@@ -61,3 +61,6 @@ Made a back button for all the screens so that you can go back to the start scre
 
 #### 6/1 Xinni
 Still working on remaking levels in order of increasing difficulty. Level 1 is almost finished.
+
+#### 6/2 Vivian
+Made two more working levels (4&5), just need to change the contents of them so that they're harder. Made a MovePlat and a MoveSpike class, which are moving platforms and moving spikes. Tested them out in level 4, they work. You can choose how much displacement you want for the moving objects and whether or not you want them moving horizontally or vertically.
