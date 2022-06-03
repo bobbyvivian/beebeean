@@ -78,10 +78,7 @@ public class Level2 {
     strawberries2.add(berry5);  
 
     Strawberries berry7 = new Strawberries(width-165, 410);
-    strawberries2.add(berry7);
-
-    //Strawberries berry6 = new Strawberries(width/2,260);
-    //strawberries2.add(berry6);    
+    strawberries2.add(berry7);  
 
     Strawberries berry8 = new Strawberries(width/2-200, 560);
     strawberries2.add(berry8);
