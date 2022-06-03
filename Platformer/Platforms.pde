@@ -1,5 +1,5 @@
 public class Platforms {
-  float x,y,sizeX,sizeY;
+  float x,y,sizeX,sizeY,xSpeed,ySpeed;
   color rgb;
   boolean move;
   
@@ -10,6 +10,8 @@ public class Platforms {
     sizeY = h;
     rgb = c;
     move = false;
+    xSpeed = 0;
+    ySpeed = 0;
   }
   
   public void display() {

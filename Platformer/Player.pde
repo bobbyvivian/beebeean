@@ -69,6 +69,7 @@ public class Player {
     if (indMP!=-1) {
       Platforms p = platforms.get(indMP);              
       if (p.move) {
+        p = (MovePlat)p;
         x+=p.xSpeed;
       }
     }
