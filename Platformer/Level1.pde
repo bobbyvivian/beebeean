@@ -11,10 +11,10 @@ public class Level1 {
     Platforms plat2 = new Platforms(0, 600, 200, 50, color(250, 180, 200)); // 2
     platforms1.add(plat2);
 
-    Platforms plat3 = new Platforms(300, 600, 800, 50, color(247, 142, 207)); // 2
+    Platforms plat3 = new Platforms(400, 600, 800, 50, color(247, 142, 207)); // 2
     platforms1.add(plat3);
 
-    Platforms plat4 = new Platforms(0, 450, 700, 50, color(251, 188, 238)); // 3 
+    Platforms plat4 = new Platforms(0, 450, 650, 50, color(251, 188, 238)); // 3 
     platforms1.add(plat4);
 
     Platforms plat5 = new Platforms(850, 450, 250, 50, color(255, 144, 179)); // 3
@@ -55,6 +55,9 @@ public class Level1 {
 
     Spikes spike8 = new Spikes(width-150, 100);
     spikes1.add(spike8);
+    
+    Spikes spike9 = new Spikes(250, 700);
+    spikes1.add(spike9);
 
     Strawberries berry1 = new Strawberries(900, 710);
     strawberries1.add(berry1);    
