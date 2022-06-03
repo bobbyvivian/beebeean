@@ -11,16 +11,16 @@ public class Level2 {
     Platforms plat2 = new Platforms(0, 600, 400, 50, color(250, 180, 200)); //second
     platforms2.add(plat2);
     
-    Platforms plat3 = new Platforms(600, 600, 800, 50, color(247, 142, 207)); 
+    Platforms plat3 = new Platforms(600, 600, 800, 50, color(247, 142, 207)); //second
     platforms2.add(plat3);
     
-    Platforms plat4 = new Platforms(150, 450, 625, 50, color(251, 188, 238)); 
+    Platforms plat4 = new Platforms(150, 450, 500, 50, color(251, 188, 238)); 
     platforms2.add(plat4);
     
-    Platforms plat5 = new Platforms(850, 450, 200, 50, color(207, 185, 247)); 
+    Platforms plat5 = new Platforms(800, 450, 200, 50, color(207, 185, 247)); 
     platforms2.add(plat5);
     
-    Platforms plat6 = new Platforms(150, 300, 400, 50, color(212, 176, 249)); 
+    Platforms plat6 = new Platforms(0, 300, 450, 50, color(212, 176, 249)); 
     platforms2.add(plat6);
     
     Platforms plat7 = new Platforms(0, 150, 280, 50, color(197, 128, 237)); 
