@@ -210,9 +210,9 @@ public class Player {
     return -1;
   }
   
-  public void retry(float xpos, float ypos) {
-    x = xpos;
-    y = ypos;
+  public void retry() {
+    x = playerSize;
+    y = 750-playerSize;
     xSpeed = 2;
     ySpeed = 0;
     acceleration = 0;

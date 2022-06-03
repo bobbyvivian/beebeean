@@ -160,10 +160,10 @@ public void mouseClicked() {
   }
 
   if (!player.alive) {
-    player.retry(playerSize, 750-playerSize);
+    player.retry();
   }
   if (player.win) {
-    player.retry(playerSize, 750-playerSize);
+    player.retry();
   }
   if (back.clicked(mouseX,mouseY)) {
     startscreen.clicked = false;

@@ -48,18 +48,22 @@ public class StartScreen {
   public int whichLevel(float xPos, float yPos) {
     //level 1
     if (xPos>=100&&xPos<=250&&yPos>=300&&yPos<=400) {
+      player.retry();      
       return 1;
     }
     //level 2
     if (xPos>=width/2-75&&xPos<=width/2+75&&yPos>=300&&yPos<=400) {
+      player.retry();            
       return 2;
     } 
     //level 3
     if (xPos>=width-250&&xPos<=width-100&&yPos>=300&&yPos<=400) {
+      player.retry();            
       return 3;
     }  
     //level 4
     if (xPos>=100&&xPos<=250&&yPos>=500&&yPos<=600) {
+      player.retry();            
       return 4;
     }       
     return -1;
