@@ -2,8 +2,8 @@ public class MoveSpike extends Spikes{
   float xSpeed,ySpeed,displace,oX,oY;
   boolean vertical;
   
-  public MoveSpike(float xPos, float yPos, float w, float h, color c, boolean v, float d) {
-    super(xPos,yPos,w,h,c);
+  public MoveSpike(float xPos, float yPos, boolean v, float d) {
+    super(xPos,yPos);
     //original position
     oX = xPos;
     oY = yPos;
