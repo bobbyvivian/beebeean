@@ -1,5 +1,5 @@
 public class MovePlat extends Platforms{
-  float xSpeed,ySpeed,displace,oX,oY;
+  float displace,oX,oY;
   boolean vertical;
   
   public MovePlat(float xPos, float yPos, float w, float h, color c, boolean v, float d) {
@@ -11,6 +11,7 @@ public class MovePlat extends Platforms{
     ySpeed = 1;
     vertical = v;
     displace = d;
+    move = true;
   }
   public void display() {
     super.display();
