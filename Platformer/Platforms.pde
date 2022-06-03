@@ -1,6 +1,7 @@
 public class Platforms {
   float x,y,sizeX,sizeY;
   color rgb;
+  boolean move;
   
   public Platforms(float xpos, float ypos, float w, float h, color c) {
     x = xpos;
@@ -8,6 +9,7 @@ public class Platforms {
     sizeX = w;
     sizeY = h;
     rgb = c;
+    move = false;
   }
   
   public void display() {
