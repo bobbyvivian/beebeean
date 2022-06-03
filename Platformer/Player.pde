@@ -36,7 +36,7 @@ public class Player {
   }
 
   public void move() {
-    onGround();
+    int indMP = onGround();
     //check to see if player dead
     player.dead();    
     //check to see if player won
@@ -64,6 +64,15 @@ public class Player {
     if (left) {
       if (x-xSpeed > 0) {
         x-=xSpeed;
+      }
+    }
+    if (indMP!=-1) {
+      Platforms p = platforms.get(indMP);              
+      if (p.move) {
+        p = (MovePlat)p;
+        if (x+p.xSpeed>=0&&x+p.xSpeed<=width) {
+          x+=p.xSpeed;
+        }
       }
     }
     
@@ -110,16 +119,21 @@ public class Player {
   }
 
 
-  public void onGround() {
+  public int onGround() {
     onGround = false;
-    for (Platforms p : platforms) {
+    Platforms p;        
+    for (int i = 0; i<platforms.size(); i++) {
+      p = platforms.get(i);          
       if (y+playerSize==p.y && x<=p.x+p.sizeX && x+playerSize>=p.x) {
         onGround = true;
+        return i;
       }
       if (y+playerSize>p.y&&y+playerSize<p.y+p.sizeY&&x<=p.x+p.sizeX && x+playerSize>=p.x) {
         onGround = true;
+        return i;
       }
     }
+    return -1;
   }
   
   public int hitUp() {
