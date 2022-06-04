@@ -158,6 +158,17 @@ public class Player {
     return -1;
   }
   
+  public int hitWall(float xPos) {
+    Platforms p;
+    for (int i = 0; i<platforms.size(); i++) {
+      p = platforms.get(i);
+      if (xPos>p.x&&xPos<p.x+p.sizeX) {
+        return i;
+      }
+    }
+    return -1;    
+  }
+  
   public void dead() {
     for (Spikes s : spikes) {
       //coming from right
