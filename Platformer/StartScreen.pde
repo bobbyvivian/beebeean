@@ -84,6 +84,11 @@ public class StartScreen {
     if (xPos>=width/2-75&&xPos<=width/2+75&&yPos>=500&&yPos<=600) {
       player.retry();            
       return 5;
+    }  
+    //level 6
+    if (xPos>=width-250&&xPos<=width-100&&yPos>=500&&yPos<=600) {
+      player.retry();            
+      return 6;
     }      
     return -1;
   }
