@@ -47,7 +47,6 @@ public class Player {
       strawberries.get(indB).display = false;
     }
     
-    
     if (countdown>30) {
       jump = true;
     }
@@ -56,16 +55,19 @@ public class Player {
     }
     
     if (right) {
-      // borders
-      if (x+xSpeed+playerSize < width) {
+      xSpeed=abs(xSpeed);  
+      if (x+xSpeed>=0 && x+xSpeed <=width) {
         x+=xSpeed;
       }
     }
     if (left) {
-      if (x-xSpeed > 0) {
-        x-=xSpeed;
+      xSpeed=abs(xSpeed)*-1;  
+      if (x+xSpeed>=0 && x+xSpeed <=width) {
+        x+=xSpeed;
       }
     }
+
+    
     if (indMP!=-1) {
       Platforms p = platforms.get(indMP);              
       if (p.move) {
@@ -158,16 +160,21 @@ public class Player {
     return -1;
   }
   
-  public int hitWall(float xPos) {
-    Platforms p;
-    for (int i = 0; i<platforms.size(); i++) {
-      p = platforms.get(i);
-      if (xPos>p.x&&xPos<p.x+p.sizeX) {
-        return i;
-      }
-    }
-    return -1;    
-  }
+  //public int hitWall(float xPos) {
+  //  Platforms p;
+  //  for (int i = 0; i<platforms.size(); i++) {
+  //    p = platforms.get(i);
+  //    if (xPos>p.x&&xPos<p.x+p.sizeX && ((y+playerSize>=p.y&&y+playerSize<=p.y+p.sizeY) || (y<=p.y+p.sizeY&&y>=p.y))) {
+  //      x = p.x+p.sizeX;;
+  //      return i;
+  //    }
+  //    if (xPos+playerSize>p.x&&xPos+playerSize<p.x+p.sizeX&& ((y+playerSize>=p.y&&y+playerSize<=p.y+p.sizeY) || (y<=p.y+p.sizeY&&y>=p.y))) {
+  //      x = p.x-playerSize;
+  //      return i;
+  //    }      
+  //  }
+  //  return -1;    
+  //}
   
   public void dead() {
     for (Spikes s : spikes) {
