@@ -62,9 +62,6 @@ public class Level4 {
     
     //Strawberries berry1 = new Strawberries(width/2+100,710);
     //strawberries4.add(berry1);    
-    
-    Strawberries berry2 = new Strawberries(width/2+500,260);
-    strawberries4.add(berry2);  
   
     Strawberries berry3 = new Strawberries(width/2+250,560);
     strawberries4.add(berry3);  
