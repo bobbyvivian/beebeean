@@ -199,22 +199,31 @@ public class Player {
   public void win() {
     //coming from right
     if (y<=door.y+door.sizeY&&y>=door.y&&x<=door.x+door.sizeX&&x>=door.x) {
+      if (points==strawberries.size()) {
+        allBerries = true;
+      }      
       win = true;
     }
     //coming from left
     if (y<=door.y+door.sizeY&&y>=door.y&&x+playerSize>=door.x&&x+playerSize<=door.x+door.sizeX) {
+      if (points==strawberries.size()) {
+        allBerries = true;
+      }        
       win = true;
     } 
     //coming from right and up
     if (y+playerSize<=door.y+door.sizeY&&y+playerSize>=door.y&&x<=door.x+door.sizeX&&x>=door.x) {
+      if (points==strawberries.size()) {
+        allBerries = true;
+      }        
       win = true;
     }
     //coming from left and up
     if (y+playerSize<=door.y+door.sizeY&&y+playerSize>=door.y&&x+playerSize>=door.x&&x+playerSize<=door.x+door.sizeX) {
+      if (points==strawberries.size()) {
+        allBerries = true;
+      }        
       win = true;
-    }
-    if (points==strawberries.size()) {
-      allBerries = true;
     }
   }
   

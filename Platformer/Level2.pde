@@ -47,7 +47,7 @@ public class Level2 {
     Spikes spike3 = new Spikes(width-250, 550);
     spikes2.add(spike3);
 
-    Spikes spike4 = new Spikes(width/2-175, 250);
+    Spikes spike4 = new Spikes(width/2-200, 250);
     spikes2.add(spike4);  
 
     Spikes spike5 = new Spikes(width-500, 400);

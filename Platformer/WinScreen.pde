@@ -1,6 +1,14 @@
 public class WinScreen {
   public void display() {
-    PImage img = loadImage("clouds.png");
+    PImage img;    
+    if (player.allBerries) {
+      img = loadImage("berries.png");
+      
+    }
+    else { 
+      img = loadImage("clouds.png");
+    }
+    
     image(img, 0 , 0);
     fill(110, 75, 115);
     textSize(128);

@@ -50,6 +50,13 @@ public class StartScreen {
     fill(128, 50, 63);    
     textSize(40);
     text("level 5", width/2-60, 550);   
+
+    //level 6 button
+    fill(250, 185, 185);
+    rect(width-250,500,150,100);
+    fill(128, 50, 63);    
+    textSize(40);
+    text("level 6", width-235, 550);       
   } 
   
   public int whichLevel(float xPos, float yPos) {
