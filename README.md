@@ -64,3 +64,6 @@ Still working on remaking levels in order of increasing difficulty. Level 1 is a
 
 #### 6/2 Vivian
 Made two more working levels (4&5), just need to change the contents of them so that they're harder. Made a MovePlat and a MoveSpike class, which are moving platforms and moving spikes. Tested them out in level 4, they work. You can choose how much displacement you want for the moving objects and whether or not you want them moving horizontally or vertically.
+
+#### 6/3 Vivian
+Made it so that the player moves with the moving platforms once it's on them, but it can also move on them. Also fixed the screen border collision stuff with moving platforms. Added a lot of features to level 4 so it's harder. Also made a special screen that's displayed if you get all the strawberries and win by making an allBerries boolean field in player that tells you if all of them were collected. Able to use that boolean to display the right image in the win screen class. Also made a level 6, used it today to test the screens, will add contents later. Got rid of some invisible strawberries from some levels that were breaking the special screen.
