@@ -1,7 +1,7 @@
 public class Player {
   float x, y, xSpeed, ySpeed, acceleration;
   color rgb;
-  boolean onGround, alive, left, right, up, jump, win;
+  boolean onGround, alive, left, right, up, jump, win, allBerries;
   int countdown, points, level;
 
   public Player(float xpos, float ypos, color col) {
@@ -20,6 +20,7 @@ public class Player {
     countdown = 0;
     jump = false;
     win = false;
+    allBerries = false;
     level = 1;
   }
 
@@ -211,7 +212,10 @@ public class Player {
     //coming from left and up
     if (y+playerSize<=door.y+door.sizeY&&y+playerSize>=door.y&&x+playerSize>=door.x&&x+playerSize<=door.x+door.sizeX) {
       win = true;
-    }        
+    }
+    if (points==strawberries.size()) {
+      allBerries = true;
+    }
   }
   
   public int getPoint() {
@@ -250,7 +254,7 @@ public class Player {
     acceleration = 0;
     points = 0;
     alive = true;
-
+    allBerries = false;
     jump = false;
     win = false; 
     for (int i = 0; i<strawberries.size(); i++) {
