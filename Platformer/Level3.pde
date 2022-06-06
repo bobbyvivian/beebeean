@@ -8,7 +8,7 @@ public class Level3 {
     Platforms plat1 = new Platforms(0, 750, 1000, 50, color(249, 146, 173)); // ground  
     platforms3.add(plat1);
     
-    Platforms plat2 = new Platforms(0, 600, 400, 50, color(250, 180, 200)); //second
+    Platforms plat2 = new Platforms(0, 600, 150, 50, color(250, 180, 200)); //second
     platforms3.add(plat2);
     
     Platforms plat3 = new Platforms(600, 600, 800, 50, color(247, 142, 207)); 
