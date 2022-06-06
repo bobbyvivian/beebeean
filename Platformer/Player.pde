@@ -57,13 +57,13 @@ public class Player {
     
     if (right) {
       xSpeed=abs(xSpeed);  
-      if (x+xSpeed>=0 && x+xSpeed <=width) {
+      if (x+xSpeed>=0 && x+xSpeed <=width-playerSize) {
         x+=xSpeed;
       }
     }
     if (left) {
       xSpeed=abs(xSpeed)*-1;  
-      if (x+xSpeed>=0 && x+xSpeed <=width) {
+      if (x+xSpeed>=0 && x+xSpeed <=width-playerSize) {
         x+=xSpeed;
       }
     }
@@ -73,7 +73,7 @@ public class Player {
       Platforms p = platforms.get(indMP);              
       if (p.move) {
         p = (MovePlat)p;
-        if (x+p.xSpeed>=0&&x+p.xSpeed<=width) {
+        if (x+p.xSpeed>=0&&x+p.xSpeed<=width-playerSize) {
           x+=p.xSpeed;
         }
       }
