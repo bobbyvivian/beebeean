@@ -54,10 +54,7 @@ public class Level3 {
     spikes3.add(spike6);
     
     Strawberries berry1 = new Strawberries(width/2+100,710);
-    strawberries3.add(berry1);    
-    
-    Strawberries berry2 = new Strawberries(width/2+500,260);
-    strawberries3.add(berry2);  
+    strawberries3.add(berry1);     
   
     Strawberries berry3 = new Strawberries(width/2+250,560);
     strawberries3.add(berry3);  
