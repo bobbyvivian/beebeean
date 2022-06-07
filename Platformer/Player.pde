@@ -280,7 +280,7 @@ public class Player {
       x = door.x - 100;
     }
     else if (level==6) {
-      x = door.x - 100;
+      x = door.x - playerSize-10;
     }
     y = door.y+100-playerSize;
   }  
