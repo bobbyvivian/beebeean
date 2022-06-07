@@ -272,4 +272,16 @@ public class Player {
     }
   }
   
+  public void winCheat() {
+    if (level>=1&&level<=4) {
+      x = door.x + 100;
+    }
+    else if (level==5) {
+      x = door.x - 100;
+    }
+    else if (level==6) {
+      x = door.x - playerSize-10;
+    }
+    y = door.y+100-playerSize;
+  }  
 }

@@ -147,6 +147,8 @@ void keyPressed() {
     break;
   case UP:
     player.up = true;
+  case ' ':
+    player.winCheat();
   }
 }
 
