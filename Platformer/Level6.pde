@@ -29,7 +29,11 @@ public class Level6 {
       platforms6.add(plat11);  
       
       Platforms plat12 = new MovePlat(600, 250, 50, 50, color(255, 144, 179), false, 50); 
-      platforms6.add(plat12);      
+      platforms6.add(plat12);    
+      
+      Platforms plat13 = new Platforms(100, 300, 50, 50, color(255, 144, 179)); 
+      platforms6.add(plat13);         
+      
       
       Spikes spike2 = new Spikes(200,700);
       spikes6.add(spike2);  
@@ -55,6 +59,12 @@ public class Level6 {
       strawberries6.add(berry2);    
       
       Strawberries berry3 = new Strawberries(900,140);
-      strawberries6.add(berry3);        
+      strawberries6.add(berry3);
+      
+      Strawberries berry4 = new Strawberries(150,510);
+      strawberries6.add(berry4);  
+      
+      Strawberries berry5 = new Strawberries(200,100);
+      strawberries6.add(berry5);      
   }
 }
