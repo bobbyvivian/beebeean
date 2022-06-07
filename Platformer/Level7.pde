@@ -19,13 +19,16 @@ public class Level7 {
       Platforms plat5 = new Platforms(50, 600, 150, 50, color(247, 142, 207)); 
       platforms7.add(plat5);
       
+      Platforms plat6 = new MovePlat(0, 300, 150, 50, color(247, 142, 207), false, 100); 
+      platforms7.add(plat6);      
+      
       Platforms plat10 = new Platforms(0, -50, width, 50, color(255, 144, 179)); //ceiling
       platforms7.add(plat10);       
       
       Spikes spike3 = new Spikes(400,700);
       spikes7.add(spike3);
       
-      Spikes spike4 = new MoveSpike(0,250,false,100);
+      Spikes spike4 = new MoveSpike(50,250,false,100);
       spikes7.add(spike4);  
       
       Spikes spike5 = new MoveSpike(400,400,false,50);

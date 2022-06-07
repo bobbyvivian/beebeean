@@ -148,6 +148,7 @@ void keyPressed() {
   case UP:
     player.up = true;
   }
+  
 }
 
 void keyReleased() {
