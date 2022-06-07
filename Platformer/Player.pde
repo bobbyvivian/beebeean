@@ -273,7 +273,7 @@ public class Player {
   }
   
   public void winCheat() {
-    if (level>=1&&level<=4) {
+    if (level>=1&&level<=4||level==7) {
       x = door.x + 100;
     }
     else if (level==5) {
@@ -284,4 +284,12 @@ public class Player {
     }
     y = door.y+100-playerSize;
   }  
+  
+  public void berryCheat() {
+    winCheat();
+    for (int i = 0; i<strawberries.size(); i++) {
+      strawberries.get(i).display = false;
+      points++;
+    }
+  }
 }
