@@ -19,19 +19,19 @@ public class Level6 {
       Platforms plat5 = new Platforms(width/2-300, height/2, 600, 50, color(255, 144, 179)); //second
       platforms6.add(plat5);   
       
-      Platforms plat9 = new Platforms(750, 200, 250, 50, color(255, 144, 179)); 
+      Platforms plat9 = new Platforms(750, 200, 250, 50, color(251, 188, 238)); 
       platforms6.add(plat9);
   
-      Platforms plat10 = new Platforms(0, -50, width, 50, color(255, 144, 179)); //ceiling
+      Platforms plat10 = new Platforms(0, -50, width, 50, color(197, 128, 237)); //ceiling
       platforms6.add(plat10);       
       
-      Platforms plat11 = new MovePlat(100, 200, 200, 50, color(255, 144, 179), false,100); 
+      Platforms plat11 = new MovePlat(100, 200, 200, 50, color(220, 170, 241), false,100); 
       platforms6.add(plat11);  
       
       Platforms plat12 = new MovePlat(600, 250, 50, 50, color(255, 144, 179), false, 50); 
       platforms6.add(plat12);    
       
-      Platforms plat13 = new Platforms(100, 300, 50, 50, color(255, 144, 179)); 
+      Platforms plat13 = new Platforms(100, 300, 50, 50, color(197, 128, 237)); 
       platforms6.add(plat13);         
       
       

@@ -10,8 +10,11 @@ public class Level7 {
       Platforms plat2 = new MovePlat(220, 550, 90, 50, color(250, 180, 200),false,100); //second
       platforms7.add(plat2);
       
-      Platforms plat3 = new Platforms(400, 200, 800, 50, color(247, 142, 207)); 
+      Platforms plat3 = new Platforms(400, 200, 400, 50, color(247, 142, 207)); 
       platforms7.add(plat3);
+      
+      Platforms plat11 = new Platforms(900, 200, 200, 50, color(247, 142, 207)); 
+      platforms7.add(plat11);      
       
       Platforms plat4 = new MovePlat(350, 450, 200, 50, color(251, 188, 238),false,50); 
       platforms7.add(plat4);      
@@ -22,22 +25,41 @@ public class Level7 {
       Platforms plat6 = new MovePlat(0, 300, 150, 50, color(247, 142, 207), false, 100); 
       platforms7.add(plat6);      
       
-      Platforms plat10 = new Platforms(0, -50, width, 50, color(255, 144, 179)); //ceiling
-      platforms7.add(plat10);       
+      Platforms plat7 = new Platforms(700, 350, 200, 50, color(251, 188, 238)); 
+      platforms7.add(plat7);   
       
-      Spikes spike3 = new Spikes(400,700);
+      Platforms plat10 = new Platforms(0, -50, width, 50, color(255, 144, 179)); //ceiling
+      platforms7.add(plat10);   
+      
+      
+      Spikes spike3 = new MoveSpike(400,700,false,200);
       spikes7.add(spike3);
       
-      Spikes spike4 = new MoveSpike(50,250,false,100);
+      Spikes spike4 = new MoveSpike(20,250,false,100);
       spikes7.add(spike4);  
       
       Spikes spike5 = new MoveSpike(400,400,false,50);
       spikes7.add(spike5);  
       
-      Spikes spike6 = new Spikes(width-100,700);
+      Spikes spike6 = new MoveSpike(800,700,false,50);
       spikes7.add(spike6);  
       
       Spikes spike7 = new Spikes(100,550);
       spikes7.add(spike7);          
+      
+      Strawberries berry1 = new Strawberries(700,690);
+      strawberries7.add(berry1);     
+      
+      Strawberries berry2 = new Strawberries(850,300);
+      strawberries7.add(berry2);    
+      
+      Strawberries berry3 = new Strawberries(900,140);
+      strawberries7.add(berry3);
+      
+      Strawberries berry4 = new Strawberries(130,450);
+      strawberries7.add(berry4);  
+      
+      Strawberries berry5 = new Strawberries(200,100);
+      strawberries7.add(berry5);         
   }
 }
