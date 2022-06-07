@@ -11,6 +11,9 @@ public class Level3 {
     Platforms p2 = new Platforms(200, 600, 200, 50, color(250, 180, 200));
     platforms3.add(p2);
     
+    Platforms p3 = new Platforms(600, 600, 200, 50, color(247, 142, 207));
+    platforms3.add(p3);
+    
     //Platforms plat2 = new Platforms(0, 600, 150, 50, color(250, 180, 200)); //second
     //platforms3.add(plat2);
     
