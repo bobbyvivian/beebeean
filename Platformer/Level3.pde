@@ -5,17 +5,26 @@ public class Level3 {
   Door door3 = new Door(0, 50, 75, 100);
   
   public Level3() {
-    Platforms plat1 = new Platforms(0, 750, 1000, 50, color(249, 146, 173)); // ground  
-    platforms3.add(plat1);
+    Platforms p1 = new Platforms(0, 750, 1000, 50, color(249, 146, 173)); // ground  
+    platforms3.add(p1);
     
-    Platforms plat2 = new Platforms(0, 600, 150, 50, color(250, 180, 200)); //second
-    platforms3.add(plat2);
+    Platforms p2 = new Platforms(200, 600, 200, 50, color(250, 180, 200));
+    platforms3.add(p2);
     
-    Platforms plat3 = new Platforms(250, 600, 150, 50, color(247, 142, 207)); 
-    platforms3.add(plat3);
+    Platforms p3 = new Platforms(600, 600, 200, 50, color(247, 142, 207));
+    platforms3.add(p3);
     
-    Platforms plat4 = new Platforms(500, 600, 150, 50, color(250, 180, 200));
-    platforms3.add(plat4);
+    //Platforms plat2 = new Platforms(0, 600, 150, 50, color(250, 180, 200)); //second
+    //platforms3.add(plat2);
+    
+    //Platforms plat3 = new Platforms(350, 600, 150, 50, color(247, 142, 207)); 
+    //platforms3.add(plat3);
+    
+    //Platforms plat4 = new Platforms(700, 600, 150, 50, color(250, 180, 200));
+    //platforms3.add(plat4);
+    
+    //Platforms plat5 = new Platforms(750, 600, 150, 50, color(251, 188, 238));
+    //platforms3.add(plat5);
     
     //Platforms plat4 = new Platforms(150, 450, 625, 50, color(251, 188, 238)); 
     //platforms3.add(plat4);
@@ -41,34 +50,34 @@ public class Level3 {
     Spikes spike1 = new Spikes(width/2-50,700);
     spikes3.add(spike1);
   
-    Spikes spike2 = new Spikes(10,550);
-    spikes3.add(spike2);
+    //Spikes spike2 = new Spikes(10,550);
+    //spikes3.add(spike2);
     
-    Spikes spike3 = new Spikes(width-180,550);
-    spikes3.add(spike3);
+    //Spikes spike3 = new Spikes(width-180,550);
+    //spikes3.add(spike3);
     
-    Spikes spike4 = new Spikes(width/2-175,250);
-    spikes3.add(spike4);  
+    //Spikes spike4 = new Spikes(width/2-175,250);
+    //spikes3.add(spike4);  
     
-    Spikes spike5 = new Spikes(width-400,400);
-    spikes3.add(spike5);  
+    //Spikes spike5 = new Spikes(width-400,400);
+    //spikes3.add(spike5);  
     
-    Spikes spike6 = new Spikes(width-100,400);
-    spikes3.add(spike6);
+    //Spikes spike6 = new Spikes(width-100,400);
+    //spikes3.add(spike6);
     
-    Strawberries berry1 = new Strawberries(width/2+100,710);
-    strawberries3.add(berry1);     
+    //Strawberries berry1 = new Strawberries(width/2+100,710);
+    //strawberries3.add(berry1);     
   
-    Strawberries berry3 = new Strawberries(width/2+250,560);
-    strawberries3.add(berry3);  
+    //Strawberries berry3 = new Strawberries(width/2+250,560);
+    //strawberries3.add(berry3);  
     
-    Strawberries berry4 = new Strawberries(width-100,110);
-    strawberries3.add(berry4);  
+    //Strawberries berry4 = new Strawberries(width-100,110);
+    //strawberries3.add(berry4);  
     
-    Strawberries berry5 = new Strawberries(width/2-100,410);
-    strawberries3.add(berry5);  
+    //Strawberries berry5 = new Strawberries(width/2-100,410);
+    //strawberries3.add(berry5);  
     
-    Strawberries berry6 = new Strawberries(width/2,260);
-    strawberries3.add(berry6);    
+    //Strawberries berry6 = new Strawberries(width/2,260);
+    //strawberries3.add(berry6);    
   }
 } 
