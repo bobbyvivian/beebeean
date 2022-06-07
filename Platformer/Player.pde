@@ -273,7 +273,7 @@ public class Player {
   }
   
   public void winCheat() {
-    if (level>=1&&level<=4) {
+    if (level>=1&&level<=4||level==7) {
       x = door.x + 100;
     }
     else if (level==5) {
