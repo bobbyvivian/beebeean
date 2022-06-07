@@ -91,6 +91,7 @@ public class Player {
     if (up&&onGround) {
       if (player.countdown==0) {
         player.countdown+=60;
+        ySpeed = 2;
       }      
     }    
     if (jump) {
@@ -102,7 +103,7 @@ public class Player {
       y = platforms.get(indP).y+ platforms.get(indP).sizeY;
       acceleration = 0.2;
       ySpeed += acceleration;
-      y+=ySpeed;            
+      y+=ySpeed;          
     }
     else {
       ySpeed += acceleration;
