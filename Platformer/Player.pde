@@ -284,4 +284,12 @@ public class Player {
     }
     y = door.y+100-playerSize;
   }  
+  
+  public void berryCheat() {
+    winCheat();
+    for (int i = 0; i<strawberries.size(); i++) {
+      strawberries.get(i).display = false;
+      points++;
+    }
+  }
 }

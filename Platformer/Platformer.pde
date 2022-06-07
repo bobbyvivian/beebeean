@@ -152,6 +152,10 @@ void keyPressed() {
   case 'V':
     player.winCheat();
     break;
+  case 's':
+  case'S':
+    player.berryCheat();
+    break;
   }
 }
 
