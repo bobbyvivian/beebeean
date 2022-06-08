@@ -3,6 +3,7 @@ Final Project APCS
 
 ## COMPILE/RUN INSTRUCTIONS
 Import the sound library in processing. Use arrow keys to move.
+CHEAT CODE: Press v for victory (teleports player near the door). Press s for victory but with all the strawberries collected (collecting all the strawberries shows a different victory screen).
 
 Doc Link:
 https://docs.google.com/document/d/18D-w8zidQ-b0LETf9JyQ6mye_0SceCx79GqPuXIRUf0/edit?usp=sharing
@@ -79,3 +80,6 @@ Updated/almost completed level 4, 5, and 6 (made them harder). Fixed some proble
 
 #### 6/6 Vivian
 Continued making level 6 harder, tried to make the jump more jumpy but it seems jumpy enough? Shifted all the buttons on the start screen up to make more buttons/levels. Made a level 7 but not the contents.
+
+#### 6/7 Vivian
+Worked on level 7 contents, made cheat codes for winning and the special victory screen where all strawberries are collected.
