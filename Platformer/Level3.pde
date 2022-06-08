@@ -47,9 +47,12 @@ public class Level3 {
     //Platforms plat10 = new Platforms(0, -50, width, 50, color(255, 144, 179)); 
     //platforms3.add(plat10);   
     
-    Spikes spike1 = new Spikes(width/2-50,700);
-    spikes3.add(spike1);
-  
+    Spikes s1 = new Spikes(width/2-100,700);
+    spikes3.add(s1);
+    
+    Spikes s2 = new Spikes(width/2, 700);
+    spikes3.add(s2);
+    
     //Spikes spike2 = new Spikes(10,550);
     //spikes3.add(spike2);
     
