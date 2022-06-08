@@ -57,13 +57,13 @@ public class Player {
     
     if (right) {
       xSpeed=abs(xSpeed);  
-      if (x+xSpeed>=0 && x+xSpeed <=width-playerSize) {
+      if (x+xSpeed>=0 && x+xSpeed<=width-playerSize) {
         x+=xSpeed;
       }
     }
     if (left) {
       xSpeed=abs(xSpeed)*-1;  
-      if (x+xSpeed>=0 && x+xSpeed <=width-playerSize) {
+      if (x+xSpeed>=0 && x+xSpeed<=width-playerSize) {
         x+=xSpeed;
       }
     }
@@ -167,7 +167,7 @@ public class Player {
   //  for (int i = 0; i<platforms.size(); i++) {
   //    p = platforms.get(i);
   //    if (xPos>p.x&&xPos<p.x+p.sizeX && ((y+playerSize>=p.y&&y+playerSize<=p.y+p.sizeY) || (y<=p.y+p.sizeY&&y>=p.y))) {
-  //      x = p.x+p.sizeX;;
+  //      x = p.x+p.sizeX;
   //      return i;
   //    }
   //    if (xPos+playerSize>p.x&&xPos+playerSize<p.x+p.sizeX&& ((y+playerSize>=p.y&&y+playerSize<=p.y+p.sizeY) || (y<=p.y+p.sizeY&&y>=p.y))) {
@@ -273,7 +273,7 @@ public class Player {
   }
   
   public void winCheat() {
-    if (level>=1&&level<=4||level==7) {
+    if (level>=1&&level<=4||level==7||level==8) {
       x = door.x + 100;
     }
     else if (level==5) {
