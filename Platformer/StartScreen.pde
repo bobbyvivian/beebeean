@@ -63,7 +63,14 @@ public class StartScreen {
     rect(100,600,150,100);
     fill(128, 50, 63);    
     textSize(40);
-    text("level 7", 115, 650);    
+    text("level 7", 115, 650);   
+    
+    //level 8 button
+    fill(250, 185, 185);
+    rect(width/2-75,600,150,100);
+    fill(128, 50, 63);    
+    textSize(40);
+    text("level 8", width/2-60, 650);        
   } 
   
   public int whichLevel(float xPos, float yPos) {
@@ -102,6 +109,11 @@ public class StartScreen {
       player.retry();            
       return 7;
     }  
+    //level 8
+    if (xPos>=width/2-75&&xPos<width/2+75&&yPos>=600&&yPos<=700) {
+      player.retry();            
+      return 8;
+    }      
     
     return -1;
   }
