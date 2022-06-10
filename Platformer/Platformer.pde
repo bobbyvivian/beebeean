@@ -15,6 +15,7 @@ Level4 level4;
 Level5 level5;
 Level6 level6;
 Level7 level7;
+Level8 level8;
 BackButton back;
 
 import processing.sound.*;
@@ -38,6 +39,7 @@ void setup() {
   level5 = new Level5();
   level6 = new Level6();
   level7 = new Level7();
+  level8 = new Level8();
   back = new BackButton();
 
 
@@ -90,7 +92,13 @@ void draw() {
     spikes = level7.spikes7;
     strawberries = level7.strawberries7;
     door = level7.door7;
-  }   
+  } 
+  if (l==8) {
+    platforms = level8.platforms8;
+    spikes = level8.spikes8;
+    strawberries = level8.strawberries8;
+    door = level8.door8;
+  }    
 
   //display platforms
   for (Platforms p : platforms) {
@@ -197,7 +205,10 @@ public void mouseClicked() {
       } 
       if (l==7) {
         player.level = 7;
-      }        
+      }    
+      if (l==8) {
+        player.level = 8;
+      }       
     }
   }
 
