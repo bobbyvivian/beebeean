@@ -84,5 +84,5 @@ Continued making level 6 harder, tried to make the jump more jumpy but it seems 
 #### 6/7 Vivian
 Worked on level 7 contents, made cheat codes for winning and the special victory screen where all strawberries are collected.
 
-#### 6/8 Vivian
+#### 6/9 Vivian
 Finally solved the problem that's been bugging me for the longest time. Now the player doesn't automatically teleport either on top or below a platform after hitting the platform wall (kind of looks like it's being pulled by a magnet). That created another problem with it hitting the ceiling and not being able to move horizontally until after falling off ceiling but that's also fixed. Worked on level 8, basically complete. Cheat code for level 8 also done.
