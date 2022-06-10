@@ -93,12 +93,12 @@ void draw() {
     strawberries = level7.strawberries7;
     door = level7.door7;
   }   
-  if (l==7) {
+  if (l==8) {
     platforms = level8.platforms8;
     spikes = level8.spikes8;
     strawberries = level8.strawberries8;
     door = level8.door8;
-  }   
+  }    
 
   //display platforms
   for (Platforms p : platforms) {
@@ -205,10 +205,10 @@ public void mouseClicked() {
       } 
       if (l==7) {
         player.level = 7;
-      }   
+      }    
       if (l==8) {
         player.level = 8;
-      }        
+      }       
     }
   }
 
