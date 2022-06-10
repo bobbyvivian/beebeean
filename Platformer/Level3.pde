@@ -22,13 +22,13 @@ public class Level3 {
 
     Platforms p6 = new Platforms(0, 150, 200, 50, color(255, 144, 179));
     platforms3.add(p6);
-    
+
     Platforms p7 = new Platforms(800, 150, 200, 50, color(207, 185, 247));
     platforms3.add(p7);
-    
+
     Platforms p8 = new MovePlat(300, 150, 200, 50, color(197, 128, 237), false, 200);
     platforms3.add(p8);
-    
+
     Platforms plat10 = new Platforms(0, -50, width, 50, color(255, 144, 179)); //ceiling
     platforms3.add(plat10);  
 
@@ -70,7 +70,7 @@ public class Level3 {
 
     Spikes s2 = new Spikes(width/2, 700);
     spikes3.add(s2);
-    
+
     Spikes s3 = new Spikes(width-100, 100);
     spikes3.add(s3);
 
@@ -88,13 +88,13 @@ public class Level3 {
 
     //Spikes spike6 = new Spikes(width-100,400);
     //spikes3.add(spike6);
-    
+
     Strawberries b1 = new Strawberries(width-175, 100);
     strawberries3.add(b1);
-    
+
     Strawberries b2 = new Strawberries(150, 100);
     strawberries3.add(b2);
-    
+
     //Strawberries berry1 = new Strawberries(width/2+100,710);
     //strawberries3.add(berry1);     
 
