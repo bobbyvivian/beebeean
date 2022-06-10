@@ -55,7 +55,11 @@ public class Player {
       jump = false;
     }
     
+    int indP = hitUp();
     int hitWall = hitWall(x+xSpeed);
+    if (indP!=-1&&hitWall!=-1) {
+      hitWall = -1;
+    }
     
     if (right) {
       xSpeed=abs(xSpeed);  
@@ -100,7 +104,6 @@ public class Player {
       acceleration = -0.2;
     }
     
-    int indP = hitUp();
     if (indP>-1) {
       y = platforms.get(indP).y+ platforms.get(indP).sizeY;
       acceleration = 0.2;
@@ -146,7 +149,7 @@ public class Player {
     Platforms p;    
     for (int i = 0; i<platforms.size(); i++) {
       p = platforms.get(i);    
-      if ((y+ySpeed<=p.y+p.sizeY && y+ySpeed>=p.y && x<=p.x+p.sizeX && x+playerSize>=p.x)) {
+      if ((y+ySpeed<p.y+p.sizeY && y+ySpeed>p.y && x<p.x+p.sizeX && x+playerSize>p.x)) {
         return i;
       }  
     }
