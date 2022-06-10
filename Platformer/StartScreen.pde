@@ -70,7 +70,7 @@ public class StartScreen {
     rect(width/2-75,600,150,100);
     fill(128, 50, 63);    
     textSize(40);
-    text("level 7", width/2-60, 650);       
+    text("level 8", width/2-60, 650);       
   } 
   
   public int whichLevel(float xPos, float yPos) {

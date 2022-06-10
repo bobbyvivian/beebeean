@@ -15,6 +15,7 @@ Level4 level4;
 Level5 level5;
 Level6 level6;
 Level7 level7;
+Level8 level8;
 BackButton back;
 
 import processing.sound.*;
