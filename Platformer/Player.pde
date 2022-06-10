@@ -55,15 +55,17 @@ public class Player {
       jump = false;
     }
     
+    int hitWall = hitWall(x+xSpeed);
+    
     if (right) {
       xSpeed=abs(xSpeed);  
-      if (x+xSpeed>=0 && x+xSpeed <=width-playerSize) {
+      if (x+xSpeed>=0 && x+xSpeed <=width-playerSize && hitWall==-1) {
         x+=xSpeed;
       }
     }
     if (left) {
       xSpeed=abs(xSpeed)*-1;  
-      if (x+xSpeed>=0 && x+xSpeed <=width-playerSize) {
+      if (x+xSpeed>=0 && x+xSpeed <=width-playerSize && hitWall==-1) {
         x+=xSpeed;
       }
     }
@@ -73,7 +75,7 @@ public class Player {
       Platforms p = platforms.get(indMP);              
       if (p.move) {
         p = (MovePlat)p;
-        if (x+p.xSpeed>=0&&x+p.xSpeed<=width-playerSize) {
+        if (x+p.xSpeed>=0&&x+p.xSpeed<=width-playerSize&&hitWall(x+p.xSpeed)==-1) {
           x+=p.xSpeed;
         }
       }
@@ -162,21 +164,19 @@ public class Player {
     return -1;
   }
   
-  //public int hitWall(float xPos) {
-  //  Platforms p;
-  //  for (int i = 0; i<platforms.size(); i++) {
-  //    p = platforms.get(i);
-  //    if (xPos>p.x&&xPos<p.x+p.sizeX && ((y+playerSize>=p.y&&y+playerSize<=p.y+p.sizeY) || (y<=p.y+p.sizeY&&y>=p.y))) {
-  //      x = p.x+p.sizeX;;
-  //      return i;
-  //    }
-  //    if (xPos+playerSize>p.x&&xPos+playerSize<p.x+p.sizeX&& ((y+playerSize>=p.y&&y+playerSize<=p.y+p.sizeY) || (y<=p.y+p.sizeY&&y>=p.y))) {
-  //      x = p.x-playerSize;
-  //      return i;
-  //    }      
-  //  }
-  //  return -1;    
-  //}
+  public int hitWall(float xPos) {
+    Platforms p;
+    for (int i = 0; i<platforms.size(); i++) {
+      p = platforms.get(i);
+      if (xPos>=p.x&&xPos<=p.x+p.sizeX && ((y+playerSize>p.y&&y+playerSize<p.y+p.sizeY) || (y<p.y+p.sizeY&&y>p.y))) {
+        return i;
+      }
+      if (xPos+playerSize>=p.x&&xPos+playerSize<=p.x+p.sizeX&& ((y+playerSize>p.y&&y+playerSize<p.y+p.sizeY) || (y<p.y+p.sizeY&&y>p.y))) {
+        return i;
+      }      
+    }
+    return -1;    
+  }
   
   public void dead() {
     for (Spikes s : spikes) {
