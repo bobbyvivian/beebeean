@@ -154,6 +154,7 @@ void keyPressed() {
     player.left = true;
     break;
   case UP:
+  //make jump function, if jump true, nothing happens, landing makes it false, if jump false change yspeed
     player.up = true;
     break;
   case 'v':
