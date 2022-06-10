@@ -20,7 +20,7 @@ public class Level3 {
     Platforms p5 = new MovePlat(0, 300, 200, 50, color(255, 194, 252), false, 800);
     platforms3.add(p5);
     
-    Platforms p6 = new MovePlat(700, 150, 200, 50, color(255, 191, 219), false, 800);
+    Platforms p6 = new Platforms(0, 150, 200, 50, color(255, 144, 179));
     platforms3.add(p6);
     
     //Platforms plat2 = new Platforms(0, 600, 150, 50, color(250, 180, 200)); //second
