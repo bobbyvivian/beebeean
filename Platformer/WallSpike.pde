@@ -6,7 +6,7 @@ public class WallSpike extends MoveSpike {
     super.oY = yPos;
     super.xSpeed = 2;
     super.ySpeed = 1;
-    super.vertical = true;
+    super.vertical = false;
     super.displace = d;
     super.wall = true;
   }

@@ -200,7 +200,8 @@ public class Player {
           alive = false;        
         }
         if (y<=s.y+50&&y>=s.y&&x>=s.x&&x<=s.x+16) {
-          alive = false;           
+          alive = false; 
+        }
       }
     }
   }
