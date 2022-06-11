@@ -95,7 +95,7 @@ public class Player {
     }
     
     
-    if (indP>-1) {
+    if (indP>-1&&hitWall==-1) {
       y = platforms.get(indP).y+ platforms.get(indP).sizeY;
       ySpeed = .5;
       ySpeed += acceleration;
