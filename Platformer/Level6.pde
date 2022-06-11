@@ -7,7 +7,7 @@ public class Level6 {
       Platforms plat1 = new Platforms(0, 750, 1000, 50, color(249, 146, 173)); // ground  
       platforms6.add(plat1);
       
-      Platforms plat2 = new MovePlat(650, 520, 100, 50, color(250, 180, 200), false, 100); //second
+      Platforms plat2 = new MovePlat(650, 540, 100, 50, color(250, 180, 200), false, 100); //second
       platforms6.add(plat2);    
       
       Platforms plat3 = new Platforms(300, 600, 300, 50, color(247, 142, 207)); //second
@@ -28,7 +28,7 @@ public class Level6 {
       Platforms plat11 = new MovePlat(100, 200, 200, 50, color(220, 170, 241), false,100); 
       platforms6.add(plat11);  
       
-      Platforms plat12 = new MovePlat(600, 250, 50, 50, color(255, 144, 179), false, 50); 
+      Platforms plat12 = new Platforms(625, 250, 50, 50, color(255, 144, 179)); 
       platforms6.add(plat12);    
       
       Platforms plat13 = new Platforms(100, 300, 50, 50, color(197, 128, 237)); 
@@ -50,7 +50,17 @@ public class Level6 {
       spikes6.add(spike6);        
       
       Spikes spike7 = new Spikes(820,150);
-      spikes6.add(spike7);         
+      spikes6.add(spike7);   
+      
+      Spikes spike8 = new WallSpike(100-16,200,100,true);
+      spikes6.add(spike8);     
+      Spikes spike9 = new WallSpike(300+16,200,100,false);
+      spikes6.add(spike9);         
+      
+      Spikes spike10 = new WallSpike(650-16,540,100,true);
+      spikes6.add(spike10);     
+      Spikes spike11 = new WallSpike(750+16,540,100,false);
+      spikes6.add(spike11);         
       
       Strawberries berry1 = new Strawberries(width/2-20,height/2-150);
       strawberries6.add(berry1);     
