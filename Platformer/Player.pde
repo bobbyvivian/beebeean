@@ -8,8 +8,8 @@ public class Player {
     x = xpos;
     y = ypos;
     xSpeed = 2;
-    ySpeed = 0;
-    acceleration = 0;
+    ySpeed = -4;
+    acceleration = 0.2;
     points = 0;
     rgb = col;
     onGround = true;
@@ -48,12 +48,7 @@ public class Player {
       strawberries.get(indB).display = false;
     }
     
-    if (countdown>30) {
-      jump = true;
-    }
-    else {
-      jump = false;
-    }
+
     
     int indP = hitUp(x+xSpeed);
     int hitWall = hitWall(x+xSpeed);
@@ -94,23 +89,15 @@ public class Player {
       acceleration = 0.2;
     }
     else {
-      ySpeed = 0;
-      acceleration = 0;
+      if (!up) {
+        ySpeed = 0;
+        acceleration = 0;
+      }
     }
     
-    if (up&&onGround) {
-      if (player.countdown==0) {
-        player.countdown+=60;
-        ySpeed = 2;
-      }      
-    }    
-    if (jump) {
-      acceleration = -0.2;
-    }
     
     if (indP>-1) {
       y = platforms.get(indP).y+ platforms.get(indP).sizeY;
-      acceleration = 0.2;
       ySpeed += acceleration;
       y+=ySpeed;          
     }
@@ -126,9 +113,7 @@ public class Player {
         y = platforms.get(pInd).y - playerSize;
       }
     }
-      if(countdown > 0){
-        countdown --;
-      }        
+    
   }
 
 
