@@ -8,8 +8,8 @@ public class Player {
     x = xpos;
     y = ypos;
     xSpeed = 2;
-    ySpeed = 0;
-    acceleration = 0;
+    ySpeed = -8;
+    acceleration = 0.2;
     points = 0;
     rgb = col;
     onGround = true;
@@ -46,13 +46,6 @@ public class Player {
     int indB = player.getPoint();
     if (indB!=-1) {
       strawberries.get(indB).display = false;
-    }
-    
-    if (countdown>30) {
-      jump = true;
-    }
-    else {
-      jump = false;
     }
     
     int indP = hitUp(x+xSpeed);
@@ -94,23 +87,17 @@ public class Player {
       acceleration = 0.2;
     }
     else {
-      ySpeed = 0;
-      acceleration = 0;
+      if (!up) {
+        ySpeed = 0;
+        acceleration = 0;
+      }
+      up=false;
     }
     
-    if (up&&onGround) {
-      if (player.countdown==0) {
-        player.countdown+=60;
-        ySpeed = 2;
-      }      
-    }    
-    if (jump) {
-      acceleration = -0.2;
-    }
     
-    if (indP>-1) {
+    if (indP>-1&&hitWall==-1) {
       y = platforms.get(indP).y+ platforms.get(indP).sizeY;
-      acceleration = 0.2;
+      ySpeed = .5;
       ySpeed += acceleration;
       y+=ySpeed;          
     }
@@ -126,9 +113,7 @@ public class Player {
         y = platforms.get(pInd).y - playerSize;
       }
     }
-      if(countdown > 0){
-        countdown --;
-      }        
+    
   }
 
 
@@ -137,11 +122,11 @@ public class Player {
     Platforms p;        
     for (int i = 0; i<platforms.size(); i++) {
       p = platforms.get(i);          
-      if (y+playerSize==p.y && x<=p.x+p.sizeX && x+playerSize>=p.x) {
+      if (y+playerSize==p.y && x<p.x+p.sizeX && x+playerSize>p.x) {
         onGround = true;
         return i;
       }
-      if (y+playerSize>p.y&&y+playerSize<p.y+p.sizeY&&x<=p.x+p.sizeX && x+playerSize>=p.x) {
+      if (y+playerSize>p.y&&y+playerSize<p.y+p.sizeY&&x<p.x+p.sizeX && x+playerSize>p.x) {
         onGround = true;
         return i;
       }
@@ -164,7 +149,7 @@ public class Player {
     Platforms p;
     for (int i = 0; i<platforms.size(); i++) {
       p = platforms.get(i);
-      if (ypos>p.y&&ypos<p.y+p.sizeY&&x<=p.x+p.sizeX && x+playerSize>=p.x) {
+      if (ypos>p.y&&ypos<p.y+p.sizeY&&x<p.x+p.sizeX && x+playerSize>p.x) {
         return i;
       }
     }
@@ -241,20 +226,20 @@ public class Player {
         s = strawberries.get(i);       
         if (s.display) {
           //coming from right      
-          if (y+playerSize<=s.y+30&&y+playerSize>=s.y&&x+playerSize>=s.x&&x+playerSize<=s.x+40) {
+          if (y+playerSize<=s.y+30&&y+playerSize>=s.y&&x+playerSize>=s.x&&x+playerSize<=s.x+80) {
             points++;        
             return i;
           }
-          if (y<=s.y+30&&y>=s.y&&x+playerSize>=s.x&&x+playerSize<=s.x+40) {
+          if (y<=s.y+30&&y>=s.y&&x+playerSize>=s.x&&x+playerSize<=s.x+80) {
             points++;               
             return i;
           }     
           //coming from left
-          if (y+playerSize<=s.y+30&&y+playerSize>=s.y&&x>=s.x&&x<=s.x+40) {
+          if (y+playerSize<=s.y+30&&y+playerSize>=s.y&&x>=s.x&&x<=s.x+80) {
             points++;               
             return i;
           }
-          if (y<=s.y+30&&y>=s.y&&x>=s.x&&x<=s.x+40) {
+          if (y<=s.y+30&&y>=s.y&&x>=s.x&&x<=s.x+80) {
             points++;               
             return i;
           }      
@@ -280,7 +265,7 @@ public class Player {
   }
   
   public void winCheat() {
-    if (level>=1&&level<=4||level==7||level==8) {
+    if (level>=1&&level<=8||level==7||level==8) {
       x = door.x + 100;
     }
     else if (level==5) {

@@ -7,10 +7,10 @@ public class Level6 {
       Platforms plat1 = new Platforms(0, 750, 1000, 50, color(249, 146, 173)); // ground  
       platforms6.add(plat1);
       
-      Platforms plat2 = new MovePlat(700, 520, 100, 50, color(250, 180, 200), false, 100); //second
+      Platforms plat2 = new MovePlat(650, 520, 100, 50, color(250, 180, 200), false, 100); //second
       platforms6.add(plat2);    
       
-      Platforms plat3 = new Platforms(width/2-100, 600, 200, 50, color(247, 142, 207)); //second
+      Platforms plat3 = new Platforms(300, 600, 300, 50, color(247, 142, 207)); //second
       platforms6.add(plat3);  
       
       Platforms plat4 = new Platforms(120, 550, 100, 50, color(212, 176, 249)); //second
@@ -35,7 +35,7 @@ public class Level6 {
       platforms6.add(plat13);         
       
       
-      Spikes spike2 = new Spikes(200,700);
+      Spikes spike2 = new Spikes(250,700);
       spikes6.add(spike2);  
       
       Spikes spike3 = new MoveSpike(250,height/2-50,false,75);

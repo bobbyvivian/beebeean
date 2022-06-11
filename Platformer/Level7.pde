@@ -7,7 +7,7 @@ public class Level7 {
       Platforms plat1 = new Platforms(0, 750, 1000, 50, color(249, 146, 173)); // ground  
       platforms7.add(plat1);
       
-      Platforms plat2 = new MovePlat(220, 550, 90, 50, color(250, 180, 200),false,100); //second
+      Platforms plat2 = new MovePlat(240, 550, 90, 50, color(250, 180, 200),false,100); //second
       platforms7.add(plat2);
       
       Platforms plat3 = new Platforms(400, 200, 400, 50, color(247, 142, 207)); 
