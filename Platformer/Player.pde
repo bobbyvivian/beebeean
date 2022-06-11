@@ -55,7 +55,7 @@ public class Player {
       jump = false;
     }
     
-    int indP = hitUp();
+    int indP = hitUp(x+xSpeed);
     int hitWall = hitWall(x+xSpeed);
     if (indP!=-1&&hitWall!=-1) {
       hitWall = -1;
@@ -73,13 +73,17 @@ public class Player {
         x+=xSpeed;
       }
     }
-
+   
     
     if (indMP!=-1) {
       Platforms p = platforms.get(indMP);              
       if (p.move) {
         p = (MovePlat)p;
-        if (x+p.xSpeed>=0&&x+p.xSpeed<=width-playerSize&&hitWall(x+p.xSpeed)==-1) {
+        hitWall = hitWall(x+p.xSpeed);
+        if (indP!=-1&&hitWall!=-1) {
+          hitWall = -1;
+        }         
+        if (x+p.xSpeed>=0&&x+p.xSpeed<=width-playerSize&&hitWall==-1) {
           x+=p.xSpeed;
         }
       }
@@ -145,11 +149,11 @@ public class Player {
     return -1;
   }
   
-  public int hitUp() {
+  public int hitUp(float xPos) {
     Platforms p;    
     for (int i = 0; i<platforms.size(); i++) {
       p = platforms.get(i);    
-      if ((y+ySpeed<p.y+p.sizeY && y+ySpeed>p.y && x<p.x+p.sizeX && x+playerSize>p.x)) {
+      if ((y+ySpeed<p.y+p.sizeY && y+ySpeed>p.y && xPos<p.x+p.sizeX && xPos+playerSize>p.x)) {
         return i;
       }  
     }
@@ -166,7 +170,7 @@ public class Player {
     }
     return -1;
   }
-  
+
   public int hitWall(float xPos) {
     Platforms p;
     for (int i = 0; i<platforms.size(); i++) {
