@@ -1,5 +1,6 @@
 public class WallSpike extends MoveSpike {  
-  public WallSpike(float xPos, float yPos, float d) {
+  boolean left;
+  public WallSpike(float xPos, float yPos, float d, boolean l) {
     super(xPos,yPos,true,d);
     //original position
     super.oX = xPos;
@@ -9,13 +10,21 @@ public class WallSpike extends MoveSpike {
     super.vertical = false;
     super.displace = d;
     super.wall = true;
+    left = l;
   }
   public void display() {
     fill(super.rgb);
-    noStroke();
-    triangle(x,y,x+16,y,x+16,y+16);
-    triangle(x,y+25,x+16,y+16,x+16,y+34);
-    triangle(x,y+50,x+16,y+34,x+16,y+50);        
+    noStroke();    
+    if (left) {
+      triangle(x,y,x+16,y,x+16,y+16);
+      triangle(x,y+25,x+16,y+16,x+16,y+34);
+      triangle(x,y+50,x+16,y+34,x+16,y+50);  
+    }
+    else {
+      triangle(x,y,x-16,y,x-16,y+16);
+      triangle(x,y+25,x-16,y+16,x-16,y+34);
+      triangle(x,y+50,x-16,y+34,x-16,y+50);       
+    }
     move();
   }
   public void move() {

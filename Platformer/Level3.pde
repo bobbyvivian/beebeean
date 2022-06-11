@@ -41,8 +41,11 @@ public class Level3 {
     Spikes s3 = new Spikes(width-100, 100);
     spikes3.add(s3);
 
-    Spikes spike2 = new WallSpike(400-16,480,100);
-    spikes3.add(spike2);
+    Spikes s4 = new WallSpike(400-16,480,100);
+    spikes3.add(s4);
+    
+    Spikes s5 = new WallSpike(600-16,480,100);
+    spikes3.add(s5);    
 
     Strawberries b1 = new Strawberries(width-175, 100);
     strawberries3.add(b1);
