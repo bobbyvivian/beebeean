@@ -26,7 +26,7 @@ public class Level5 {
     Platforms plat7 = new Platforms(0, 300, 200, 50, color(197, 128, 237)); 
     platforms5.add(plat7);
     
-    Platforms plat8 = new MovePlat(300, 150, 200, 50, color(220, 170, 241), false, 100); 
+    Platforms plat8 = new MovePlat(250, 190, 250, 50, color(220, 170, 241), false, 100); 
     platforms5.add(plat8);
       
     Platforms plat9 = new Platforms(730, 150, 300, 50, color(255, 144, 179)); 
@@ -47,7 +47,7 @@ public class Level5 {
     Spikes spike3 = new Spikes(width-180,550);
     spikes5.add(spike3);
     
-    Spikes spike4 = new MoveSpike(0,250,false,100);
+    Spikes spike4 = new MoveSpike(0,250,false,75);
     spikes5.add(spike4);  
     
     Spikes spike5 = new MoveSpike(400,400,false,200);
@@ -55,6 +55,12 @@ public class Level5 {
     
     Spikes spike6 = new Spikes(width-100,400);
     spikes5.add(spike6);
+    
+    Spikes spike7 = new WallSpike(250-16,190,100,true);
+    spikes5.add(spike7);  
+    Spikes spike8 = new WallSpike(500+16,190,100,false);
+    spikes5.add(spike8);      
+
     
     Strawberries berry1 = new Strawberries(450,650);
     strawberries5.add(berry1);    

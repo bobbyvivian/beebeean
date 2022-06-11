@@ -11,6 +11,7 @@ public class MoveSpike extends Spikes{
     ySpeed = 1;
     vertical = v;
     displace = d;
+    super.wall = false;
   }
   public void display() {
     super.display();

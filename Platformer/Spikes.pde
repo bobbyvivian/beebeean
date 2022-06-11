@@ -1,6 +1,7 @@
 public class Spikes {
   float x,y,sizeX,sizeY;
   color rgb;
+  boolean wall;
   
   public Spikes(float xpos, float ypos) {
     x = xpos;
