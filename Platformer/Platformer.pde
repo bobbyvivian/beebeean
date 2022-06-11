@@ -156,7 +156,7 @@ void keyPressed() {
   case UP:
   //make jump function, if jump true, nothing happens, landing makes it false, if jump false change yspeed
     if (player.onGround) {
-      player.ySpeed = -4;
+      player.ySpeed = -8;
       player.acceleration = 0.2;
       player.up = true;
     }
