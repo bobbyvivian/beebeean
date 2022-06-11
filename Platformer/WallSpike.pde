@@ -1,4 +1,4 @@
-public class WallSpike extends MoveSpike() {  
+public class WallSpike extends MoveSpike {  
   public WallSpike(float xPos, float yPos, float d) {
     super(xPos,yPos,true,d);
     //original position
@@ -8,6 +8,7 @@ public class WallSpike extends MoveSpike() {
     super.ySpeed = 1;
     super.vertical = true;
     super.displace = d;
+    super.wall = true;
   }
   public void display() {
     fill(super.rgb);
