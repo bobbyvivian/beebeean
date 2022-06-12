@@ -91,4 +91,4 @@ Finally solved the problem that's been bugging me for the longest time. Now the 
 Made the jump look smooth and like a jump. No more levitaty jump. Also hits the ceiling of platforms much more smoothly/realistically. Tweaked some features in certain levels to accommodate new jump.
 
 #### 6/11 Vivian
-Made a new type of spike (wall spike). It's a moving type of spike so it extends MoveSpike (it's attached to moving platforms). Added this feature to levels 3,4,5,6. Will work on 7,8 tmr.
+Made a new type of spike (wall spike). It's a moving type of spike so it extends MoveSpike (it's attached to moving platforms). Added this feature to levels 3,4,5,6,7,8.
