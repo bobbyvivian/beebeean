@@ -92,3 +92,6 @@ Made the jump look smooth and like a jump. No more levitaty jump. Also hits the 
 
 #### 6/11 Vivian
 Made a new type of spike (wall spike). It's a moving type of spike so it extends MoveSpike (it's attached to moving platforms). Added this feature to levels 3,4,5,6,7,8.
+
+#### 6/12 Vivian
+Fixed strawberry cheat bug where points keep increasing if you keep pressing s. Tested the levels today, adjusted level 7 slightly.
