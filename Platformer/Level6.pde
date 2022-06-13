@@ -46,6 +46,7 @@ public class Level6 {
       
       Spikes spike5 = new MoveSpike(700,700,false,100);
       spikes6.add(spike5);  
+      
       Spikes spike6 = new MoveSpike(790,700,false,100);
       spikes6.add(spike6);        
       
