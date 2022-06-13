@@ -44,7 +44,6 @@ public class Level8 {
     Platforms plat13 = new Platforms(200, 200, 50, 50, color(212, 176, 249)); 
     platforms8.add(plat13);      
 
-
     Spikes spike1 = new MoveSpike(200, 700, false, 200);
     spikes8.add(spike1);
 
@@ -73,7 +72,6 @@ public class Level8 {
 
     Spikes spike10 = new WallSpike(750-16, 500, 100, true);
     spikes8.add(spike10);
-
 
     Strawberries berry3 = new Strawberries(width/2+200, 560);
     strawberries8.add(berry3);  
