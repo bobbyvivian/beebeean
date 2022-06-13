@@ -3,7 +3,7 @@ public class Level1 {
   ArrayList<Spikes> spikes1 = new ArrayList<Spikes>();
   ArrayList<Strawberries> strawberries1 = new ArrayList<Strawberries>();
   Door door1 = new Door(0, 50, 75, 100);
-  
+
   public Level1() {
     Platforms plat1 = new Platforms(0, 750, 1000, 50, color(249, 146, 173)); // ground  
     platforms1.add(plat1);
@@ -55,7 +55,7 @@ public class Level1 {
 
     Spikes spike8 = new Spikes(width-150, 100);
     spikes1.add(spike8);
-    
+
     Strawberries berry1 = new Strawberries(900, 710);
     strawberries1.add(berry1);    
 
