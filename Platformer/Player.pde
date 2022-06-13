@@ -296,9 +296,12 @@ public class Player {
   
   public void berryCheat() {
     winCheat();
-    for (int i = 0; i<strawberries.size(); i++) {
-      strawberries.get(i).display = false;
-      points++;
+    if (!allBerries) {
+      for (int i = 0; i<strawberries.size(); i++) {
+        strawberries.get(i).display = false;
+        points++;
+      }
     }
+    allBerries = true;
   }
 }
