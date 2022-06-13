@@ -81,8 +81,17 @@ Updated/almost completed level 4, 5, and 6 (made them harder). Fixed some proble
 #### 6/6 Vivian
 Continued making level 6 harder, tried to make the jump more jumpy but it seems jumpy enough? Shifted all the buttons on the start screen up to make more buttons/levels. Made a level 7 but not the contents.
 
+#### 6/6 Xinni
+Working on level 2, finishing up with platform placement.
+
 #### 6/7 Vivian
 Worked on level 7 contents, made cheat codes for winning and the special victory screen where all strawberries are collected.
+
+#### 6/7 Xinni
+Finished level 2. Beginning on making level 3.
+
+#### 6/8 
+Working on level 3.
 
 #### 6/9 Vivian
 Finally solved the problem that's been bugging me for the longest time. Now the player doesn't automatically teleport either on top or below a platform after hitting the platform wall (kind of looks like it's being pulled by a magnet). That created another problem with it hitting the ceiling and not being able to move horizontally until after falling off ceiling but that's also fixed. Worked on level 8, basically complete. Cheat code for level 8 also done.
@@ -90,8 +99,13 @@ Finally solved the problem that's been bugging me for the longest time. Now the 
 #### 6/10 Vivian
 Made the jump look smooth and like a jump. No more levitaty jump. Also hits the ceiling of platforms much more smoothly/realistically. Tweaked some features in certain levels to accommodate new jump.
 
+#### 6/10 Xinni 
+Working on level 3. 
+
 #### 6/11 Vivian
 Made a new type of spike (wall spike). It's a moving type of spike so it extends MoveSpike (it's attached to moving platforms). Added this feature to levels 3,4,5,6,7,8.
 
 #### 6/12 Vivian
 Fixed strawberry cheat bug where points keep increasing if you keep pressing s. Tested the levels today, adjusted level 7 slightly.
+
+
