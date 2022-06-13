@@ -302,5 +302,6 @@ public class Player {
         points++;
       }
     }
+    allBerries = true;
   }
 }
