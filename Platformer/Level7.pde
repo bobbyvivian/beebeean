@@ -31,7 +31,6 @@ public class Level7 {
     Platforms plat10 = new Platforms(0, -50, width, 50, color(255, 144, 179)); //ceiling
     platforms7.add(plat10);   
 
-
     Spikes spike3 = new MoveSpike(400, 700, false, 200);
     spikes7.add(spike3);
 
@@ -49,6 +48,7 @@ public class Level7 {
 
     Spikes spike8 = new WallSpike(240-16, 550, 100, true);
     spikes7.add(spike8);   
+    
     Spikes spike9 = new WallSpike(330+16, 550, 100, false);
     spikes7.add(spike9);        
 
