@@ -54,6 +54,7 @@ public class Level7 {
 
     Spikes spike10 = new WallSpike(370-16, 450, 50, true);
     spikes7.add(spike10);   
+    
     Spikes spike11 = new WallSpike(620+16, 450, 50, false);
     spikes7.add(spike11);         
 
