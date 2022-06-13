@@ -34,7 +34,6 @@ public class Level6 {
       Platforms plat13 = new Platforms(100, 300, 50, 50, color(197, 128, 237)); 
       platforms6.add(plat13);         
       
-      
       Spikes spike2 = new Spikes(250,700);
       spikes6.add(spike2);  
       
