@@ -20,9 +20,6 @@ public class Level5 {
     Platforms plat5 = new Platforms(850, 450, 220, 50, color(207, 185, 247)); 
     platforms5.add(plat5);
     
-    //Platforms plat6 = new Platforms(150, 300, 400, 50, color(212, 176, 249)); 
-    //platforms5.add(plat6);
-    
     Platforms plat7 = new Platforms(0, 300, 200, 50, color(197, 128, 237)); 
     platforms5.add(plat7);
     
