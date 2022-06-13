@@ -64,10 +64,7 @@ public class Level4 {
     spikes4.add(spike8);  
     Spikes spike9 = new WallSpike(220+16,600,100,false);
     spikes4.add(spike9);        
-    
-    //Strawberries berry1 = new Strawberries(width/2+100,710);
-    //strawberries4.add(berry1);    
-  
+
     Strawberries berry3 = new Strawberries(width/2+250,560);
     strawberries4.add(berry3);  
     
